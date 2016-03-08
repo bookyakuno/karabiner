@@ -192,6 +192,109 @@ F7・F10 かな・英数変換
                 
 ===============================================================
                 
+
+    <item>
+      <name>単語移動……「E」+IKJL 、「W」で単語選択</name>
+       <identifier>private03aaa.appdef</identifier>
+      <autogen>
+        __KeyOverlaidModifier__
+        KeyCode::E, ModifierFlag::NONE,
+
+        @begin
+        KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_simple_vi_mode_AnotherEEE,
+        @end
+
+        @begin
+        KeyCode::E,
+        @end
+      </autogen>
+    </item>
+
+/*ここから*/
+
+    <item hidden="true">
+      <identifier vk_config="true">notsave.simple_vi_mode_AnotherEEE</identifier>
+
+      {{ SIMPLE_VI_MODE_EXTRA }}
+
+      <autogen>
+        __BlockUntilKeyUp__ KeyCode::E
+      </autogen>
+
+      <autogen>__KeyToKey__ KeyCode::J, KeyCode::CURSOR_LEFT,VK_OPTION</autogen>
+      <autogen>__KeyToKey__ KeyCode::K, KeyCode::CURSOR_DOWN,VK_OPTION</autogen>
+      <autogen>__KeyToKey__ KeyCode::I, KeyCode::CURSOR_UP,VK_OPTION</autogen>
+      <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT,VK_OPTION</autogen>
+      <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::DELETE,VK_OPTION</autogen>
+
+      <autogen>__KeyToKey__ KeyCode::S, KeyCode::FN</autogen>
+      <autogen>__KeyToKey__ KeyCode::E, KeyCode::OPTION_L</autogen>
+            <autogen>__KeyToKey__ KeyCode::W, KeyCode::SHIFT_L</autogen>
+            <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::COMMAND_L</autogen>
+
+
+                </item>
+
+
+
+
+/*ーーーーーーーーーーーーーーーーーーーーーーーーー*/
+
+    <item>
+      <name>単語選択……「W」+IKJL </name>
+       <identifier>private03aaaW.appdef</identifier>
+      <autogen>
+        __KeyOverlaidModifier__
+        KeyCode::W, ModifierFlag::NONE,
+
+        @begin
+        KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_simple_vi_mode_AnotherEEEW,
+        @end
+
+        @begin
+        KeyCode::W,
+        @end
+      </autogen>
+    </item>
+
+/*ここから*/
+
+    <item hidden="true">
+      <identifier vk_config="true">notsave.simple_vi_mode_AnotherEEEW</identifier>
+
+      {{ SIMPLE_VI_MODE_EXTRA }}
+
+      <autogen>
+        __BlockUntilKeyUp__ KeyCode::W
+      </autogen>
+
+      <autogen>__KeyToKey__ KeyCode::J, KeyCode::CURSOR_LEFT,VK_OPTION | VK_SHIFT</autogen>
+      <autogen>__KeyToKey__ KeyCode::K, KeyCode::CURSOR_DOWN,VK_OPTION | VK_SHIFT</autogen>
+      <autogen>__KeyToKey__ KeyCode::I, KeyCode::CURSOR_UP,VK_OPTION | VK_SHIFT</autogen>
+      <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT,VK_OPTION | VK_SHIFT</autogen>
+      <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::DELETE,VK_OPTION | VK_SHIFT</autogen>
+
+
+
+   <autogen>
+      __KeyToKey__  
+      KeyCode::F,
+       KeyCode::F,
+        KeyCode::JIS_EISUU
+       </autogen>
+
+
+      <autogen>__KeyToKey__ KeyCode::S, KeyCode::FN</autogen>
+      <autogen>__KeyToKey__ KeyCode::E, KeyCode::OPTION_L</autogen>
+            <autogen>__KeyToKey__ KeyCode::W, KeyCode::SHIFT_L</autogen>
+            <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::COMMAND_L</autogen>
+
+                </item>
+
+
+
+===============================================================
+
                 
 
 
