@@ -1,0 +1,75 @@
+
+===============================================================
+    <item>
+      <name>「Q」を押している間、234wersdfがテンキーに</name>
+      <appendix>十字キー……「F」+IKJL 上下左右</appendix>
+
+      <identifier>anfmb</identifier>
+      <autogen>
+        __KeyOverlaidModifier__
+        KeyCode::Q, ModifierFlag::NONE,
+
+        @begin
+        KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_simple_vi_mode_Another_Blender,
+        @end
+
+        @begin
+        KeyCode::Q,
+        @end
+        
+        
+      </autogen>
+    </item>
+
+/*ここから*/
+
+    <item hidden="true">
+      <identifier vk_config="true">notsave.simple_vi_mode_Another_Blender</identifier>
+
+      {{ SIMPLE_VI_MODE_EXTRA }}
+
+      <autogen>
+        __BlockUntilKeyUp__ KeyCode::Q
+      </autogen>
+
+
+テンキー
+
+スペースに0
+            <autogen>__KeyToKey__ KeyCode::SPACE,         KeyCode::KEYPAD_0</autogen>            	
+
+数字
+            <autogen>__KeyToKey__ KeyCode::X,         KeyCode::KEYPAD_0</autogen>
+            <autogen>__KeyToKey__ KeyCode::S,         KeyCode::KEYPAD_1</autogen>
+            <autogen>__KeyToKey__ KeyCode::D,         KeyCode::KEYPAD_2</autogen>
+            <autogen>__KeyToKey__ KeyCode::F,         KeyCode::KEYPAD_3</autogen>
+            <autogen>__KeyToKey__ KeyCode::W,         KeyCode::KEYPAD_4</autogen>
+            <autogen>__KeyToKey__ KeyCode::E,         KeyCode::KEYPAD_5</autogen>
+            <autogen>__KeyToKey__ KeyCode::R,         KeyCode::KEYPAD_6</autogen>
+            <autogen>__KeyToKey__ KeyCode::KEY_2,     KeyCode::KEYPAD_7</autogen>
+            <autogen>__KeyToKey__ KeyCode::KEY_3,     KeyCode::KEYPAD_8</autogen>
+            <autogen>__KeyToKey__ KeyCode::KEY_4,     KeyCode::KEYPAD_9</autogen>
+
+エンター、デリート
+            <autogen>__KeyToKey__ KeyCode::KEY_5,     KeyCode::ENTER</autogen>
+            <autogen>__KeyToKey__ KeyCode::T,     KeyCode::DELETE</autogen>
+エンター、デリート
+            <autogen>__KeyToKey__ KeyCode::V,     KeyCode::ENTER</autogen>
+            <autogen>__KeyToKey__ KeyCode::C,     KeyCode::DELETE</autogen>
+
+           <autogen>__KeyToKey__ KeyCode::Y,     KeyCode::QUOTE</autogen>
+
+
+四則演算
+            <autogen>__KeyToKey__ KeyCode::KEY_6,     KeyCode::KEYPAD_SLASH</autogen>
+			<autogen>__KeyToKey__ KeyCode::Y,         KeyCode::KEYPAD_MULTIPLY</autogen>            	
+            <autogen>__KeyToKey__ KeyCode::G, KeyCode::KEYPAD_MINUS</autogen>
+			 <autogen>__KeyToKey__ KeyCode::H,     KeyCode::KEYPAD_PLUS</autogen>
+
+コンマ			 
+            <autogen>__KeyToKey__ KeyCode::B,       KeyCode::DOT</autogen>
+
+                </item>
+
+
+===============================================================
