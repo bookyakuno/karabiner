@@ -1,0 +1,46 @@
+
+
+
+/*ーーーーーーーーーーーーーーーーーーーーーーーーー*/
+
+    <item>
+      <name>「V」を押している間、wer3が十字キーに</name>
+    <not>MAYA2014,MAYA2015</not>
+
+      <identifier>privatzxcve03w.appdef</identifier>
+      <autogen>
+        __KeyOverlaidModifier__
+        KeyCode::V, ModifierFlag::NONE,
+
+        @begin
+        KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_simple_vi_mode_Another_wer3,
+        @end
+
+        @begin
+        KeyCode::V,
+        @end
+        
+        
+      </autogen>
+    </item>
+
+/*ここから*/
+
+    <item hidden="true">
+      <identifier vk_config="true">notsave.simple_vi_mode_Another_wer3</identifier>
+
+      {{ SIMPLE_VI_MODE_EXTRA }}
+
+      <autogen>
+        __BlockUntilKeyUp__ KeyCode::V
+      </autogen>
+
+
+十字キー    
+      <autogen>__KeyToKey__ KeyCode::W, KeyCode::CURSOR_LEFT</autogen>
+      <autogen>__KeyToKey__ KeyCode::E, KeyCode::CURSOR_DOWN</autogen>
+      <autogen>__KeyToKey__ KeyCode::KEY_3, KeyCode::CURSOR_UP</autogen>
+      <autogen>__KeyToKey__ KeyCode::R, KeyCode::CURSOR_RIGHT</autogen>
+      
+                            </item>
+                            
