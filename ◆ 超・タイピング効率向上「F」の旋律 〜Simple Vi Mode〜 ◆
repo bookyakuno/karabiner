@@ -1,4 +1,3 @@
-
 ===============================================================
 
     <item>
@@ -24,6 +23,11 @@
 <appendix>Z+Shift = リドゥ</fappendix>
 <appendix>H = F7(カナ変換)</fappendix>
 <appendix>Q = (英数変換)</fappendix>
+<appendix>セミコロン = デリート</fappendix>
+<appendix>コロン = エンター</fappendix>
+<appendix>@ = 後ろ削除 </fappendix>
+
+
 
 
       <appendix></appendix>
@@ -145,6 +149,30 @@
 <!-- 3Dビュー操作 Blender -->
       <autogen>__KeyToKey__ KeyCode::KEY_2, PointingButton::LEFT, ModifierFlag::COMMAND_L</autogen>
       <autogen>__KeyToKey__ KeyCode::KEY_3, PointingButton::MIDDLE, ModifierFlag::COMMAND_L</autogen>
+
+
+<!-- セミコロン = デリート -->
+<autogen>__KeyToKey__ KeyCode::SEMICOLON,  ModifierFlag::NONE,
+KeyCode::DELETE,
+</autogen>
+
+<!-- コロン = エンター -->
+<autogen>__KeyToKey__ KeyCode::QUOTE, ModifierFlag::NONE,
+KeyCode::RETURN</autogen>
+
+<!-- @ = 後ろ削除  -->
+<autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, ModifierFlag::NONE,
+KeyCode::FORWARD_DELETE</autogen>
+
+
+
+
+
+
+
+
+
+
 
 </item>
 ===============================================================
