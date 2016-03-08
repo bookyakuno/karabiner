@@ -1,5 +1,4 @@
 
-
 ===============================================================
 
     <item>
@@ -131,13 +130,12 @@
 <!-- Z + Shift = リドゥ -->
 	<autogen>__KeyToKey__ KeyCode::Z, ModifierFlag::SHIFT_L, KeyCode::Z,ModifierFlag::COMMAND_L,ModifierFlag::SHIFT_L,</autogen>
             
-            
-            
+
 
 <!-- H = F7 (カナ変換) -->
 	<autogen>__KeyToKey__ KeyCode::H, KeyCode::F7</autogen>
 <!-- Q = (英数変換) -->
-	<autogen>__KeyToKey__ KeyCode::Q, KeyCode::F10</autogen>           
+	<autogen>__KeyToKey__ KeyCode::Q, KeyCode::F10,KeyCode::RETURN</autogen>           
 
 <!-- 3Dビュー操作 Maya -->
       <autogen>__KeyToKey__ KeyCode::KEY_4, PointingButton::LEFT, ModifierFlag::OPTION_L</autogen>
