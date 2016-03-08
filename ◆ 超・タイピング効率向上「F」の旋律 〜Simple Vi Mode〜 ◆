@@ -1,0 +1,197 @@
+
+
+
+
+
+===============================================================
+
+    <item>
+     <appendix></appendix>
+           <name>◆ 超・タイピング効率向上「F」の旋律 〜Simple Vi Mode〜 ◆</name>
+     <appendix></appendix>
+     
+     
+<appendix></appendix>
+<appendix>JKLI …… 十字キー</appendix>
+<appendix>N/M …… ページアップ、ダウン</appendix>
+<appendix>U/O …… 行の最初/最後</appendix>
+<appendix>SHIFT+ U/O …… 行の最初まで選択/最後まで選択</appendix>
+<appendix>Y/P …… ホーム、エンド +Shift</appendix>
+<appendix>S = Fnキー ……ページアップ/ダウン、ホーム/エンドが、十字キーとなった「IKJL」で行える。</appendix>
+<appendix>W/E/D ……  左/右/ミドルクリック</appendix>
+<appendix>XCV …… カット・コピー・ペースト</appendix>
+<appendix>Z/Shift + Z …… 戻す・やり直し</appendix>
+
+      <appendix></appendix>
+      <appendix></appendix>           
+      <appendix>認識の早さは「Key Repeat」タブにある「__BlockUntilKeyUp__timeout」で調整できる。</appendix>
+      <appendix>「Key Overlaid Modifer」の「Timeout」の値を下げるとよりこの機能の認識が早くなる。自分は250くらいに設定。</appendix>
+           <appendix></appendix>
+      <identifier>private03.appdef</identifier>
+      <autogen>
+        __KeyOverlaidModifier__
+        KeyCode::F, ModifierFlag::NONE,
+
+        @begin
+        KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_simple_vi_mode_Another,
+        @end
+
+        @begin
+        KeyCode::F,
+        @end
+        
+        
+      </autogen>
+    </item>
+
+/*ここから*/
+
+    <item hidden="true">
+      <identifier vk_config="true">notsave.simple_vi_mode_Another</identifier>
+
+      {{ SIMPLE_VI_MODE_EXTRA }}
+
+      <autogen>
+        __BlockUntilKeyUp__ KeyCode::F
+      </autogen>
+
+
+
+
+
+3Dビュー操作 Maya
+      <autogen>__KeyToKey__ KeyCode::KEY_4, PointingButton::LEFT, ModifierFlag::OPTION_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::R, PointingButton::MIDDLE, ModifierFlag::OPTION_L</autogen>
+
+     
+3Dビュー操作 Blender
+      <autogen>__KeyToKey__ KeyCode::KEY_2, PointingButton::LEFT, ModifierFlag::COMMAND_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::KEY_3, PointingButton::MIDDLE, ModifierFlag::COMMAND_L</autogen>
+
+
+
+
+JKLI = 十字キー
+      <autogen>__KeyToKey__ KeyCode::J, KeyCode::CURSOR_LEFT</autogen>
+      <autogen>__KeyToKey__ KeyCode::K, KeyCode::CURSOR_DOWN</autogen>
+      <autogen>__KeyToKey__ KeyCode::I, KeyCode::CURSOR_UP</autogen>
+      <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT</autogen>
+
+
+N/M = ページアップ、ダウン
+      <autogen>__KeyToKey__ KeyCode::M, KeyCode::PAGEUP</autogen>
+      <autogen>__KeyToKey__ KeyCode::N, KeyCode::PAGEDOWN</autogen>
+      
+
+
+O/U = 行頭、行末
+      <autogen>__KeyToKey__ KeyCode::O ,KeyCode::E, ModifierFlag::CONTROL_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::U, KeyCode::A,  ModifierFlag::CONTROL_L</autogen>
+   
+
+修飾キー、「S」を fn 、スペースを⌘に
+      <autogen>__KeyToKey__ KeyCode::S, KeyCode::FN</autogen>      
+      <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::COMMAND_L</autogen>   
+      
+           
+マウスキー ……WED 左右 ミドルクリック
+	<autogen>__KeyToKey__ KeyCode::W, PointingButton::LEFT</autogen>
+	<autogen>__KeyToKey__ KeyCode::E, PointingButton::RIGHT</autogen>           
+	<autogen>__KeyToKey__ KeyCode::D, PointingButton::MIDDLE</autogen>
+	
+	
+XCV = カット・コピー・ペースト
+	<autogen>__KeyToKey__ KeyCode::X, KeyCode::X,ModifierFlag::COMMAND_L</autogen>
+	<autogen>__KeyToKey__ KeyCode::C, KeyCode::C,ModifierFlag::COMMAND_L</autogen>
+	<autogen>__KeyToKey__ KeyCode::V, KeyCode::V,ModifierFlag::COMMAND_L</autogen>
+
+
+
+
+XCV = カット・コピー・ペースト
+	<autogen>__KeyToKey__ KeyCode::T,
+	 KeyCode::A,ModifierFlag::CONTROL_L,,ModifierFlag::SHIFT_L,
+	 KeyCode::E,ModifierFlag::CONTROL_L,ModifierFlag::SHIFT_L,
+	 KeyCode::X,ModifierFlag::COMMAND_L</autogen>
+
+
+	<autogen>__KeyToKey__ KeyCode::Y,
+	 KeyCode::A,ModifierFlag::CONTROL_L,
+	 KeyCode::E,ModifierFlag::CONTROL_L,ModifierFlag::SHIFT_L,
+	 KeyCode::C,ModifierFlag::COMMAND_L</autogen>
+
+
+
+
+DELETE = 行削除
+	<autogen>__KeyToKey__ KeyCode::DELETE,
+	 KeyCode::A,ModifierFlag::CONTROL_L,ModifierFlag::SHIFT_L,
+	 KeyCode::E,ModifierFlag::CONTROL_L,ModifierFlag::SHIFT_L,
+	 KeyCode::DELETE</autogen>
+
+
+	<autogen>__KeyToKey__ KeyCode::RETURN,
+	 KeyCode::A,ModifierFlag::CONTROL_L,ModifierFlag::SHIFT_L,
+	 KeyCode::E,ModifierFlag::CONTROL_L,ModifierFlag::SHIFT_L,
+	 KeyCode::RETURN</autogen>
+
+
+
+	<autogen>__KeyToKey__ KeyCode::SEMICOLON,
+	 KeyCode::A,ModifierFlag::CONTROL_L,ModifierFlag::SHIFT_L,
+	 KeyCode::E,ModifierFlag::CONTROL_L,ModifierFlag::SHIFT_L,
+	 KeyCode::DELETE</autogen>
+
+P = 単語削除
+
+	<autogen>__KeyToKey__ KeyCode::P,
+	 KeyCode::CURSOR_LEFT,ModifierFlag::OPTION_L,
+	 KeyCode::CURSOR_RIGHT,ModifierFlag::OPTION_L,ModifierFlag::SHIFT_L,
+	 KeyCode::DELETE</autogen>
+
+	<autogen>__KeyToKey__ KeyCode::H,
+	 KeyCode::CURSOR_LEFT,ModifierFlag::OPTION_L,
+	 KeyCode::CURSOR_RIGHT,ModifierFlag::OPTION_L,ModifierFlag::SHIFT_L,
+	 </autogen>
+
+QWASRGHB
+1234567890
+            
+            
+            戻す・やり直し
+	<autogen>__KeyToKey__ KeyCode::Z, KeyCode::Z,ModifierFlag::COMMAND_L</autogen>
+	<autogen>__KeyToKey__ KeyCode::Z, ModifierFlag::SHIFT_L, KeyCode::Z,ModifierFlag::COMMAND_L,ModifierFlag::SHIFT_L,</autogen>
+            
+            
+            
+F7・F10 かな・英数変換
+	<autogen>__KeyToKey__ KeyCode::H, KeyCode::F7</autogen>
+	<autogen>__KeyToKey__ KeyCode::Y, KeyCode::F10</autogen>           
+	<autogen>__KeyToKey__ KeyCode::N, KeyCode::F8</autogen>
+	
+	<autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, KeyCode::F7</autogen>
+	
+           
+    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                 </item>
+                
+                
+===============================================================
+                
+                
+
+
