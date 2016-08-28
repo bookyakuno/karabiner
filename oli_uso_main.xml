@@ -1,0 +1,626 @@
+<?xml version="1.0"?>
+<root>
+
+
+  <!-- karabinerは上に書いた順に優先して適用される -->
+
+
+        <!-- <autogen>__KeyOverlaidModifier__
+            KeyCode::TAB,
+            KeyCode::VK_MODIFIER_EXTRA1,
+            KeyCode::TAB,</autogen> -->
+
+            <!-- EXTRA2 -->
+        <autogen>__KeyOverlaidModifier__
+            KeyCode::JIS_KANA,
+            KeyCode::VK_MODIFIER_EXTRA2,
+            KeyCode::JIS_KANA,
+        </autogen>
+        <!-- スペース + かな = エスケープ -->
+        <autogen>__KeyToKey__
+          KeyCode::SPACE, ModifierFlag::EXTRA2,
+          KeyCode::ESCAPE
+        </autogen>
+        <!-- EXTRA3 -->
+        <autogen>__KeyOverlaidModifier__
+            KeyCode::JIS_EISUU,
+            KeyCode::VK_MODIFIER_EXTRA3,
+            KeyCode::JIS_EISUU,
+        </autogen>
+
+
+        <!-- 旋律 - スペース -->
+        <autogen>__KeyOverlaidModifier__
+            KeyCode::SPACE,
+            KeyCode::VK_MODIFIER_EXTRA4,
+            KeyCode::SPACE,
+        </autogen>
+        <!-- 旋律 - F -->
+        <autogen>__KeyOverlaidModifier__
+            KeyCode::F,ModifierFlag::NONE,
+            KeyCode::VK_MODIFIER_EXTRA4,
+            KeyCode::K,
+            KeyCode::E,
+        </autogen>
+        <autogen>__KeyToKey__
+            KeyCode::F,ModifierFlag::EXTRA2,
+            KeyCode::G,
+            KeyCode::E,
+        </autogen>
+
+        <!-- N -->
+        <autogen>__KeyToKey__
+            KeyCode::Z,ModifierFlag::NONE,
+            KeyCode::N,
+            KeyCode::N,
+        </autogen>
+
+
+
+
+
+
+
+
+            <!-- 旋律 -->
+            <!-- Fの旋律ここから -->
+            <!-- Fの旋律ここから -->
+            <!-- Fの旋律ここから -->
+            <!-- Fの旋律ここから -->
+
+              <!-- っ -->
+                  <autogen>__KeyToKey__
+                          KeyCode::A, ModifierFlag::EXTRA4,
+
+                          KeyCode::X,
+                          KeyCode::T,
+                          KeyCode::U,
+                  </autogen>
+
+              <!-- …… -->
+                  <autogen>__KeyToKey__
+                          KeyCode::Q, ModifierFlag::EXTRA4,
+                          KeyCode::SEMICOLON ,ModifierFlag::OPTION_L,
+                          KeyCode::SEMICOLON ,ModifierFlag::OPTION_L,
+                  </autogen>
+
+              <!-- すぐさま確定して改行 -->
+                  <autogen>__KeyToKey__
+                          KeyCode::RETURN, ModifierFlag::EXTRA4,
+                          ModifierFlag::CONTROL_L,
+                          KeyCode::RETURN ,
+                          KeyCode::RETURN ,
+                  </autogen>
+
+              <!-- えすけーぷを挿入 -->
+                  <autogen>__KeyToKey__
+                          KeyCode::FORWARD_DELETE, ModifierFlag::EXTRA4,
+                          KeyCode::JIS_YEN
+                  </autogen>
+
+                  <!-- 日本語句読点 -->
+                  <!-- 。 -->
+                  <autogen>__KeyToKey__
+                          KeyCode::DOT, ModifierFlag::EXTRA4,
+                          KeyCode::DOT,
+                          KeyCode::RETURN
+                  </autogen>
+
+                  <!-- 、 -->
+                  <autogen>__KeyToKey__
+                          KeyCode::COMMA, ModifierFlag::EXTRA4,
+                          KeyCode::COMMA,
+                          KeyCode::RETURN
+                  </autogen>
+
+                  <!-- ？ -->
+                  <autogen>__KeyToKey__
+                          KeyCode::SLASH, ModifierFlag::EXTRA4,
+
+                          KeyCode::SLASH,ModifierFlag::SHIFT_L,
+                          KeyCode::RETURN
+                  </autogen>
+
+                  <!-- ！ -->
+                  <autogen>__KeyToKey__
+                          KeyCode::5, ModifierFlag::EXTRA4,
+
+                          KeyCode::1,ModifierFlag::SHIFT_L,
+                          KeyCode::RETURN
+                  </autogen>
+
+                  <!-- 「」 -->
+                  <autogen>__KeyToKey__
+                          KeyCode::BRACKET_RIGHT, ModifierFlag::EXTRA4,
+                          KeyCode::A,ModifierFlag::CONTROL_L,
+                          KeyCode::BRACKET_RIGHT,
+                          KeyCode::RETURN,
+                          KeyCode::E,ModifierFlag::CONTROL_L,
+                          KeyCode::BACKSLASH,
+                          KeyCode::RETURN
+                  </autogen>
+
+                  <autogen>__KeyToKey__
+                          KeyCode::BRACKET_RIGHT, ModifierFlag::EXTRA4,
+                          ModifierFlag::CONTROL_L,KeyCode::A,ModifierFlag::CONTROL_L,
+                          KeyCode::BRACKET_RIGHT,
+                          KeyCode::SPACE,
+                          KeyCode::RETURN,
+                          KeyCode::E,ModifierFlag::CONTROL_L,
+                          KeyCode::BACKSLASH,
+                          KeyCode::SPACE,
+                          KeyCode::RETURN
+                  </autogen>
+
+                  <!-- {} -->
+                  <autogen>__KeyToKey__
+                          KeyCode::BACKSLASH, ModifierFlag::EXTRA4,
+                          KeyCode::A,ModifierFlag::CONTROL_L,
+                          KeyCode::BRACKET_RIGHT,ModifierFlag::SHIFT_L,
+                          KeyCode::RETURN,
+                          KeyCode::E,ModifierFlag::CONTROL_L,
+                          KeyCode::BACKSLASH,ModifierFlag::SHIFT_L,
+                          KeyCode::RETURN
+                  </autogen>
+
+                  <!-- () -->
+                  <autogen>__KeyToKey__
+                          KeyCode::8, ModifierFlag::EXTRA4,
+                          KeyCode::A,ModifierFlag::CONTROL_L,
+                          KeyCode::8,ModifierFlag::SHIFT_L,
+                          KeyCode::RETURN,
+                          KeyCode::E,ModifierFlag::CONTROL_L,
+                          KeyCode::9,ModifierFlag::SHIFT_L,
+                          KeyCode::RETURN
+                  </autogen>
+
+                  <!-- '' -->
+                  <autogen>__KeyToKey__
+                          KeyCode::7, ModifierFlag::EXTRA4,
+                          KeyCode::A,ModifierFlag::CONTROL_L,
+                          KeyCode::7,ModifierFlag::SHIFT_L,
+                          KeyCode::RETURN,
+                          KeyCode::E,ModifierFlag::CONTROL_L,
+                          KeyCode::7,ModifierFlag::SHIFT_L,
+                          KeyCode::RETURN
+                  </autogen>
+
+                   <!-- JKLI = 十字キー -->
+                  <autogen>__KeyToKey__
+                          KeyCode::J, ModifierFlag::EXTRA4,
+                          KeyCode::CURSOR_LEFT
+                  </autogen>
+
+                  <autogen>__KeyToKey__
+                          KeyCode::K, ModifierFlag::EXTRA4,
+                          KeyCode::CURSOR_DOWN
+                  </autogen>
+
+                  <autogen>__KeyToKey__
+                          KeyCode::I, ModifierFlag::EXTRA4,
+                          KeyCode::CURSOR_UP
+                  </autogen>
+
+                  <autogen>__KeyToKey__
+                          KeyCode::L, ModifierFlag::EXTRA4,
+                          KeyCode::CURSOR_RIGHT
+                  </autogen>
+
+                  <!-- JKLI = 十字キー -->
+                 <autogen>__KeyToKey__
+                         KeyCode::1, ModifierFlag::EXTRA4,
+                         KeyCode::CURSOR_LEFT
+                 </autogen>
+
+                 <autogen>__KeyToKey__
+                         KeyCode::2, ModifierFlag::EXTRA4,
+                         KeyCode::CURSOR_DOWN
+                 </autogen>
+
+                 <autogen>__KeyToKey__
+                         KeyCode::3, ModifierFlag::EXTRA4,
+                         KeyCode::CURSOR_UP
+                 </autogen>
+
+                 <autogen>__KeyToKey__
+                         KeyCode::4, ModifierFlag::EXTRA4,
+                         KeyCode::CURSOR_RIGHT
+                 </autogen>
+
+                  <!-- N/M = ページアップ / ダウン -->
+                  <autogen>__KeyToKey__
+                          KeyCode::M, ModifierFlag::EXTRA4,
+                          KeyCode::PAGEUP
+                  </autogen>
+
+                  <autogen>__KeyToKey__
+                          KeyCode::N, ModifierFlag::EXTRA4,
+                          KeyCode::PAGEDOWN
+                  </autogen>
+
+                  <!-- 修飾キー -->
+                  <!-- A = Option -->
+                  <!--  (実質A + F + j / l = 単語選択) -->
+                  <autogen>__KeyToKey__
+                          KeyCode::A, ModifierFlag::EXTRA4,
+                          KeyCode::OPTION_L
+                  </autogen>
+
+                  <autogen>__KeyToKey__
+                          KeyCode::JIS_EISUU, ModifierFlag::EXTRA4,
+                          KeyCode::SHIFT_L
+                  </autogen>
+
+                  <!-- 10行 ジャンプ -->
+                  <autogen>__KeyToKey__
+                          KeyCode::Q, ModifierFlag::EXTRA4,
+                          KeyCode::OPTION_L,ModifierFlag::CONTROL_L,ModifierFlag::COMMAND_L,
+                  </autogen>
+
+                  <!-- A = 単語選択 -->
+                  <autogen>__KeyToKey__
+                          KeyCode::S, ModifierFlag::EXTRA4,
+                          KeyCode::CURSOR_LEFT,ModifierFlag::OPTION_L,
+                          KeyCode::CURSOR_RIGHT,ModifierFlag::OPTION_L,ModifierFlag::SHIFT_L,
+                  </autogen>
+
+                  <!-- スペース,F = Cmd -->
+                  <autogen>__KeyToKey__
+                          KeyCode::F, ModifierFlag::EXTRA4,
+                          KeyCode::COMMAND_L
+                  </autogen>
+
+                  <autogen>__KeyToKey__
+                          KeyCode::SPACE, ModifierFlag::EXTRA4,
+                          KeyCode::COMMAND_L
+                  </autogen>
+
+                  <!-- O/U = 行頭、行末 -->
+                  <autogen>__KeyToKey__
+                          KeyCode::O, ModifierFlag::EXTRA4,
+                          KeyCode::E, ModifierFlag::CONTROL_L
+                  </autogen>
+
+                  <autogen>__KeyToKey__
+                          KeyCode::U, ModifierFlag::EXTRA4,
+                          KeyCode::A, ModifierFlag::CONTROL_L
+                  </autogen>
+
+                  <!-- W/E/D = LMB/RMB/MMB -->
+                  <autogen>__KeyToKey__
+                          KeyCode::W, ModifierFlag::EXTRA4,
+                  PointingButton::LEFT
+                  </autogen>
+
+                  <autogen>__KeyToKey__
+                          KeyCode::E, ModifierFlag::EXTRA4,
+                  PointingButton::RIGHT
+                  </autogen>
+
+                  <autogen>__KeyToKey__
+                          KeyCode::D, ModifierFlag::EXTRA4,
+                  PointingButton::MIDDLE
+                  </autogen>
+
+                  <!-- X/C/V = カット・コピー・ペースト -->
+                  <autogen>__KeyToKey__
+                          KeyCode::X, ModifierFlag::EXTRA4,
+                          KeyCode::X,ModifierFlag::COMMAND_L
+                  </autogen>
+
+                  <autogen>__KeyToKey__
+                          KeyCode::C, ModifierFlag::EXTRA4,
+                          KeyCode::C,ModifierFlag::COMMAND_L
+                  </autogen>
+
+                  <autogen>__KeyToKey__
+                          KeyCode::V, ModifierFlag::EXTRA4,
+                          KeyCode::V,ModifierFlag::COMMAND_L
+                  </autogen>
+
+                  <!-- Y = 行コピー -->
+                  <autogen>__KeyToKey__
+                          KeyCode::Y, ModifierFlag::EXTRA4,
+                          KeyCode::A,ModifierFlag::CONTROL_L,
+                          KeyCode::E,ModifierFlag::CONTROL_L,ModifierFlag::SHIFT_L,
+                          KeyCode::C,ModifierFlag::COMMAND_L
+                  </autogen>
+
+                  <!-- Shift + C = 行コピー -->
+                  <autogen>__KeyToKey__
+                    KeyCode::C, ModifierFlag::EXTRA4,
+                    ModifierFlag::CONTROL_L,
+                    KeyCode::A,ModifierFlag::CONTROL_L,
+                    KeyCode::E,ModifierFlag::CONTROL_L,ModifierFlag::SHIFT_L,
+                    KeyCode::C,ModifierFlag::COMMAND_L
+                  </autogen>
+
+                  <!-- T = 行カット -->
+                  <autogen>__KeyToKey__
+                          KeyCode::T, ModifierFlag::EXTRA4,
+                          KeyCode::A,ModifierFlag::CONTROL_L,
+                          KeyCode::CURSOR_DOWN,ModifierFlag::SHIFT_L,
+                          KeyCode::X,ModifierFlag::COMMAND_L
+                  </autogen>
+
+                <!-- Shift + X = 行カット -->
+                  <autogen>__KeyToKey__
+                          KeyCode::X, ModifierFlag::EXTRA4,
+                          ModifierFlag::CONTROL_L,
+                          KeyCode::A,ModifierFlag::CONTROL_L,
+                          KeyCode::E,ModifierFlag::CONTROL_L,ModifierFlag::SHIFT_L,
+                          KeyCode::X,ModifierFlag::COMMAND_L
+                  </autogen>
+
+                  <!-- P = 行削除 -->
+                  <autogen>__KeyToKey__
+                          KeyCode::P, ModifierFlag::EXTRA4,
+                          KeyCode::A,ModifierFlag::CONTROL_L,
+                          KeyCode::CURSOR_DOWN,ModifierFlag::SHIFT_L,
+                          <!-- KeyCode::E,ModifierFlag::CONTROL_L,ModifierFlag::SHIFT_L, -->
+                          KeyCode::FORWARD_DELETE
+                  </autogen>
+
+                  <!-- Z = アンドゥ -->
+                  <autogen>__KeyToKey__
+                          KeyCode::Z, ModifierFlag::EXTRA4,
+                          KeyCode::Z,ModifierFlag::COMMAND_L
+                  </autogen>
+
+                  <!-- Z + Shift = リドゥ -->
+                  <autogen>__KeyToKey__
+                          KeyCode::Z, ModifierFlag::EXTRA4,
+                           ModifierFlag::SHIFT_L,
+                          KeyCode::Z,ModifierFlag::COMMAND_L,ModifierFlag::SHIFT_L,
+                  </autogen>
+                  <!-- H = F7 (カナ変換) -->
+                  <autogen>__KeyToKey__
+                          KeyCode::H, ModifierFlag::EXTRA4,
+                          KeyCode::F7
+                  </autogen>
+
+                  <!-- セミコロン = デリート -->
+                  <autogen>__KeyToKey__
+                          KeyCode::SEMICOLON, ModifierFlag::EXTRA4,
+                           ModifierFlag::NONE,
+                          KeyCode::DELETE,
+                  </autogen>
+
+                  <!-- コロン = エンター -->
+                  <autogen>__KeyToKey__
+                          KeyCode::QUOTE, ModifierFlag::EXTRA4,
+                           ModifierFlag::NONE,
+                          KeyCode::RETURN
+                  </autogen>
+                  <!-- @ = 後ろ削除  -->
+                  <autogen>__KeyToKey__
+                          KeyCode::BRACKET_LEFT, ModifierFlag::EXTRA4,
+                           ModifierFlag::NONE,
+                          KeyCode::FORWARD_DELETE
+                  </autogen>
+              <!-- Fの旋律ここまで -->
+              <!-- Fの旋律ここまで -->
+              <!-- Fの旋律ここまで -->
+              <!-- Fの旋律ここまで -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- {{JAPANESE_OYAYUBISHIFT_EXTRA}} -->
+            <!-- <inputmode_only>JAPANESE</inputmode_only> -->
+
+            <!-- 左手 上段 数字キー (順親指シフト) -->
+            <autogen>__KeyToKey__ KeyCode::BACKQUOTE, ModifierFlag::EXTRA3, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::KEY_1, ModifierFlag::EXTRA3, KeyCode::SLASH, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::KEY_2, ModifierFlag::EXTRA3, KeyCode::SLASH, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::KEY_3, ModifierFlag::EXTRA3, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::KEY_4, ModifierFlag::EXTRA3, KeyCode::BRACKET_LEFT, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::KEY_5, ModifierFlag::EXTRA3, KeyCode::BRACKET_RIGHT, KeyCode::VK_NONE</autogen>
+            <!-- 左手 上段 数字キー (クロス親指シフト) -->
+            <autogen>__KeyToKey__ KeyCode::BACKQUOTE, ModifierFlag::EXTRA2, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::KEY_1, ModifierFlag::EXTRA2, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::KEY_2, ModifierFlag::EXTRA2, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::KEY_3, ModifierFlag::EXTRA2, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::KEY_4, ModifierFlag::EXTRA2, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::KEY_5, ModifierFlag::EXTRA2, KeyCode::VK_NONE</autogen>
+
+            <!-- 左手 上段 -->
+            <autogen>__KeyToKey__ KeyCode::Q, ModifierFlag::NONE, KeyCode::DOT, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::W, ModifierFlag::NONE, KeyCode::K, KeyCode::A, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::E, ModifierFlag::NONE, KeyCode::T, KeyCode::A, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::R, ModifierFlag::NONE, KeyCode::K, KeyCode::O, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::T, ModifierFlag::NONE, KeyCode::S, KeyCode::A, KeyCode::VK_NONE</autogen>
+            <!-- 左手 上段 (順親指シフト) -->
+            <autogen>__KeyToKey__ KeyCode::Q, ModifierFlag::EXTRA3, KeyCode::X, KeyCode::A, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::W, ModifierFlag::EXTRA3, KeyCode::E, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::E, ModifierFlag::EXTRA3, KeyCode::R, KeyCode::I, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::R, ModifierFlag::EXTRA3, KeyCode::X, KeyCode::Y, KeyCode::A, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::T, ModifierFlag::EXTRA3, KeyCode::R, KeyCode::E, KeyCode::VK_NONE</autogen>
+            <!-- 左手 上段 (クロス親指シフト) -->
+            <autogen>__KeyToKey__ KeyCode::Q, ModifierFlag::EXTRA2, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::W, ModifierFlag::EXTRA2, KeyCode::G, KeyCode::A, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::E, ModifierFlag::EXTRA2, KeyCode::D, KeyCode::A, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::R, ModifierFlag::EXTRA2, KeyCode::G, KeyCode::O, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::T, ModifierFlag::EXTRA2, KeyCode::Z, KeyCode::A, KeyCode::VK_NONE</autogen>
+
+            <!-- 左手 中段 -->
+            <autogen>__KeyToKey__ KeyCode::A, ModifierFlag::NONE, KeyCode::U, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::S, ModifierFlag::NONE, KeyCode::S, KeyCode::I, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::D, ModifierFlag::NONE, KeyCode::T, KeyCode::E, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::F, ModifierFlag::NONE, KeyCode::K, KeyCode::E, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::G, ModifierFlag::NONE, KeyCode::S, KeyCode::E, KeyCode::VK_NONE</autogen>
+            <!-- 左手 中段 (順親指シフト) -->
+            <autogen>__KeyToKey__ KeyCode::A, ModifierFlag::EXTRA3, KeyCode::W, KeyCode::O, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::S, ModifierFlag::EXTRA3, KeyCode::A, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::D, ModifierFlag::EXTRA3, KeyCode::N, KeyCode::A, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::F, ModifierFlag::EXTRA3, KeyCode::X, KeyCode::Y, KeyCode::U, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::G, ModifierFlag::EXTRA3, KeyCode::M, KeyCode::O, KeyCode::VK_NONE</autogen>
+            <!-- 左手 中段 (クロス親指シフト) -->
+            <autogen>__KeyToKey__ KeyCode::A, ModifierFlag::EXTRA2, KeyCode::V, KeyCode::U, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::S, ModifierFlag::EXTRA2, KeyCode::Z, KeyCode::I, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::D, ModifierFlag::EXTRA2, KeyCode::D, KeyCode::E, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::F, ModifierFlag::EXTRA2, KeyCode::G, KeyCode::E, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::G, ModifierFlag::EXTRA2, KeyCode::Z, KeyCode::E, KeyCode::VK_NONE</autogen>
+
+            <!-- 左手 下段 -->
+            <block>
+                <!-- <config_not>remap.pandz</config_not> -->
+                <autogen>__KeyToKey__ KeyCode::Z, ModifierFlag::NONE, KeyCode::DOT, ModifierFlag::EXTRA2</autogen>
+            </block>
+            <block>
+                <!-- <config_only>remap.pandz</config_only> -->
+                <autogen>__KeyToKey__ KeyCode::Z, ModifierFlag::NONE, KeyCode::DOT, KeyCode::VK_NONE</autogen>
+            </block>
+            <autogen>__KeyToKey__ KeyCode::X, ModifierFlag::NONE, KeyCode::H, KeyCode::I, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::C, ModifierFlag::NONE, KeyCode::S, KeyCode::U, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::V, ModifierFlag::NONE, KeyCode::H, KeyCode::U, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::B, ModifierFlag::NONE, KeyCode::H, KeyCode::E, KeyCode::VK_NONE</autogen>
+            <!-- 左手 下段 (順親指シフト) -->
+            <autogen>__KeyToKey__ KeyCode::Z, ModifierFlag::EXTRA3, KeyCode::X, KeyCode::U, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::X, ModifierFlag::EXTRA3, KeyCode::MINUS, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::C, ModifierFlag::EXTRA3, KeyCode::R, KeyCode::O, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::V, ModifierFlag::EXTRA3, KeyCode::Y, KeyCode::A, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::B, ModifierFlag::EXTRA3, KeyCode::X, KeyCode::I, KeyCode::VK_NONE</autogen>
+            <!-- 左手 下段 (クロス親指シフト) -->
+            <autogen>__KeyToKey__ KeyCode::Z, ModifierFlag::EXTRA2, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::X, ModifierFlag::EXTRA2, KeyCode::B, KeyCode::I, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::C, ModifierFlag::EXTRA2, KeyCode::Z, KeyCode::U, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::V, ModifierFlag::EXTRA2, KeyCode::B, KeyCode::U, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::B, ModifierFlag::EXTRA2, KeyCode::B, KeyCode::E, KeyCode::VK_NONE</autogen>
+
+
+            <!-- 右手 上段 数字キー (順親指シフト) -->
+            <autogen>__KeyToKey__ KeyCode::KEY_6, ModifierFlag::EXTRA2, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::KEY_7, ModifierFlag::EXTRA2, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::KEY_8, ModifierFlag::EXTRA2, KeyCode::KEY_9, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::KEY_9, ModifierFlag::EXTRA2, KeyCode::KEY_0, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::KEY_0, ModifierFlag::EXTRA2, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::MINUS, ModifierFlag::EXTRA2, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::EQUAL, ModifierFlag::EXTRA2, KeyCode::VK_NONE</autogen>
+            <!-- 右手 上段 数字キー (クロス親指シフト) -->
+            <autogen>__KeyToKey__ KeyCode::KEY_6, ModifierFlag::EXTRA3, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::KEY_7, ModifierFlag::EXTRA3, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::KEY_8, ModifierFlag::EXTRA3, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::KEY_9, ModifierFlag::EXTRA3, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::KEY_0, ModifierFlag::EXTRA3, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::MINUS, ModifierFlag::EXTRA3, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::EQUAL, ModifierFlag::EXTRA3, KeyCode::VK_NONE</autogen>
+
+            <!-- 右手 上段 -->
+            <autogen>__KeyToKey__ KeyCode::Y, ModifierFlag::NONE, KeyCode::R, KeyCode::A, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::NONE, KeyCode::T, KeyCode::I, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::NONE, KeyCode::K, KeyCode::U, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::O, ModifierFlag::NONE, KeyCode::T, KeyCode::U, KeyCode::VK_NONE</autogen>
+            <block>
+                <!-- <config_not>remap.pandz</config_not> -->
+                <autogen>__KeyToKey__ KeyCode::P, ModifierFlag::NONE, KeyCode::COMMA, ModifierFlag::EXTRA2</autogen>
+                <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, ModifierFlag::NONE, KeyCode::COMMA, KeyCode::VK_NONE</autogen>BRACKET_LEFT
+            </block>
+            <block>
+                <!-- <config_only>remap.pandz</config_only> -->
+                <autogen>__KeyToKey__ KeyCode::P, ModifierFlag::NONE, KeyCode::COMMA, KeyCode::VK_NONE</autogen>
+            </block>
+            <block>
+                <!-- <config_only>remap.option_y2yen</config_only> -->
+                <autogen>__KeyToKey__ KeyCode::Y, ModifierFlag::NONE, KeyCode::BACKSLASH, KeyCode::VK_NONE</autogen>
+            </block>
+            <!-- 右手 上段 (順親指シフト) -->
+            <autogen>__KeyToKey__ KeyCode::Y, ModifierFlag::EXTRA2, KeyCode::Y, KeyCode::O, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::EXTRA2, KeyCode::N, KeyCode::I, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::EXTRA2, KeyCode::R, KeyCode::U, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::O, ModifierFlag::EXTRA2, KeyCode::M, KeyCode::A, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::P, ModifierFlag::EXTRA2, KeyCode::X, KeyCode::E, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, ModifierFlag::EXTRA2, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::BRACKET_RIGHT, ModifierFlag::EXTRA2, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::BACKSLASH, ModifierFlag::EXTRA2, KeyCode::VK_NONE</autogen>
+            <!-- 右手 上段 (クロス親指シフト) -->
+            <autogen>__KeyToKey__ KeyCode::Y, ModifierFlag::EXTRA3, KeyCode::P, KeyCode::A, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::EXTRA3, KeyCode::D, KeyCode::I, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::EXTRA3, KeyCode::G, KeyCode::U, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::O, ModifierFlag::EXTRA3, KeyCode::D, KeyCode::U, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::P, ModifierFlag::EXTRA3, KeyCode::P, KeyCode::I, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, ModifierFlag::EXTRA3, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::BRACKET_RIGHT, ModifierFlag::EXTRA3, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::BACKSLASH, ModifierFlag::EXTRA3, KeyCode::VK_NONE</autogen>
+
+            <!-- 右手 中段 -->
+            <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::NONE, KeyCode::H, KeyCode::A, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::NONE, KeyCode::T, KeyCode::O, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::NONE, KeyCode::K, KeyCode::I, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::NONE, KeyCode::I, KeyCode::VK_NONE</autogen>
+            <!-- ん -->
+            <!-- <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::NONE, KeyCode::N, KeyCode::N, KeyCode::VK_NONE</autogen> -->
+            <!-- 右手 中段 (順親指シフト) -->
+            <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::EXTRA2, KeyCode::M, KeyCode::I, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::EXTRA2, KeyCode::O, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::EXTRA2, KeyCode::N, KeyCode::O, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::EXTRA2, KeyCode::X, KeyCode::Y, KeyCode::O, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::EXTRA2, KeyCode::X, KeyCode::T, KeyCode::U, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::QUOTE, ModifierFlag::EXTRA2, KeyCode::VK_NONE</autogen>
+            <!-- 右手 中段 (クロス親指シフト) -->
+            <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::EXTRA3, KeyCode::B, KeyCode::A, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::EXTRA3, KeyCode::D, KeyCode::O, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::EXTRA3, KeyCode::G, KeyCode::I, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::EXTRA3, KeyCode::P, KeyCode::O, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::EXTRA3, KeyCode::SEMICOLON, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::QUOTE, ModifierFlag::EXTRA3, KeyCode::VK_NONE</autogen>
+
+            <!-- 右手 下段 -->
+            <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::NONE, KeyCode::M, KeyCode::E, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::M, ModifierFlag::NONE, KeyCode::S, KeyCode::O, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::COMMA, ModifierFlag::NONE, KeyCode::N, KeyCode::E, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::DOT, ModifierFlag::NONE, KeyCode::H, KeyCode::O, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::SLASH, ModifierFlag::NONE, KeyCode::SLASH, KeyCode::VK_NONE</autogen>
+            <!-- 右手 下段 (順親指シフト) -->
+            <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::EXTRA2, KeyCode::N, KeyCode::U, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::M, ModifierFlag::EXTRA2, KeyCode::Y, KeyCode::U, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::COMMA, ModifierFlag::EXTRA2, KeyCode::M, KeyCode::U, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::DOT, ModifierFlag::EXTRA2, KeyCode::W, KeyCode::A, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::SLASH, ModifierFlag::EXTRA2, KeyCode::X, KeyCode::O, KeyCode::VK_NONE</autogen>
+            <!-- 右手 下段 (クロス親指シフト) -->
+            <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::EXTRA3, KeyCode::P, KeyCode::U, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::M, ModifierFlag::EXTRA3, KeyCode::Z, KeyCode::O, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::COMMA, ModifierFlag::EXTRA3, KeyCode::P, KeyCode::E, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::DOT, ModifierFlag::EXTRA3, KeyCode::B, KeyCode::O, KeyCode::VK_NONE</autogen>
+            <autogen>__KeyToKey__ KeyCode::SLASH, ModifierFlag::EXTRA3, KeyCode::VK_NONE</autogen>
+
+
+
+
+
+
+
+
+
+            <!-- 英数キー単体を無効 -->
+            <autogen>__DoublePressModifier__
+              KeyCode::JIS_EISUU, KeyCode::VK_NONE,
+              KeyCode::JIS_EISUU
+            </autogen>
+
+
+
+
+
+
+
+
+</root>
