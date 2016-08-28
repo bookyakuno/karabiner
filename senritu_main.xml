@@ -1,0 +1,359 @@
+
+
+<!-- senritu_main -->
+<?xml version="1.0"?>
+<root>
+
+
+  {{ SIMPLE_VI_MODE_EXTRA }}
+  <autogen>
+    __BlockUntilKeyUp__
+    KeyCode::F
+  </autogen>
+  <!-- ここから -->
+
+  <!-- 前後スペース入りの "+" -->
+  <autogen>__KeyToKey__
+    KeyCode::SEMICOLON, ModifierFlag::SHIFT_L,
+    KeyCode::SPACE,
+    KeyCode::SEMICOLON, ModifierFlag::SHIFT_L,
+    KeyCode::RETURN,
+    KeyCode::SPACE,
+  </autogen>
+  <!-- っ -->
+  <!-- <autogen>__KeyToKey__
+    KeyCode::A,
+    KeyCode::X,
+    KeyCode::T,
+    KeyCode::U,
+  </autogen> -->
+  <!-- 前後スペース入りの "……" -->
+  <autogen>__KeyToKey__
+    KeyCode::Q, ModifierFlag::SHIFT_L,
+    KeyCode::SPACE,
+    KeyCode::SEMICOLON, ModifierFlag::OPTION_L,
+    KeyCode::SEMICOLON, ModifierFlag::OPTION_L,
+    KeyCode::SPACE,
+  </autogen>
+  <!-- …… -->
+  <autogen>__KeyToKey__
+    KeyCode::Q,
+    KeyCode::SEMICOLON, ModifierFlag::OPTION_L,
+    KeyCode::SEMICOLON, ModifierFlag::OPTION_L,
+  </autogen>
+  <!-- すぐさま確定して改行 -->
+  <autogen>__KeyToKey__
+    KeyCode::RETURN, ModifierFlag::CONTROL_L,
+    KeyCode::RETURN,
+    KeyCode::RETURN,
+  </autogen>
+  <!-- えすけーぷを挿入 -->
+  <autogen>__KeyToKey__
+    KeyCode::FORWARD_DELETE,
+    KeyCode::JIS_YEN
+  </autogen>
+
+
+  <!-- 日本語句読点 -->
+  <!-- 。 -->
+  <autogen>__KeyToKey__
+    KeyCode::DOT,
+    KeyCode::DOT,
+    KeyCode::RETURN
+  </autogen>
+  <!-- 、 -->
+  <autogen>__KeyToKey__
+    KeyCode::COMMA,
+    KeyCode::COMMA,
+    KeyCode::RETURN
+  </autogen>
+  <!-- ？ -->
+  <autogen>__KeyToKey__
+    KeyCode::SLASH,
+    KeyCode::SLASH, ModifierFlag::SHIFT_L,
+    KeyCode::RETURN
+  </autogen>
+  <!-- ！ -->
+  <autogen>__KeyToKey__
+    KeyCode::5,
+    KeyCode::1, ModifierFlag::SHIFT_L,
+    KeyCode::RETURN
+  </autogen>
+
+  <!-- 「」 -->
+  <autogen>__KeyToKey__
+    KeyCode::BRACKET_RIGHT,
+    KeyCode::A, ModifierFlag::CONTROL_L,
+    KeyCode::BRACKET_RIGHT,
+    KeyCode::RETURN,
+    KeyCode::E, ModifierFlag::CONTROL_L,
+    KeyCode::BACKSLASH,
+    KeyCode::RETURN
+  </autogen>
+
+  <autogen>__KeyToKey__
+    KeyCode::BRACKET_RIGHT, ModifierFlag::CONTROL_L, KeyCode::A, ModifierFlag::CONTROL_L,
+    KeyCode::BRACKET_RIGHT,
+    KeyCode::SPACE,
+    KeyCode::RETURN,
+    KeyCode::E, ModifierFlag::CONTROL_L,
+    KeyCode::BACKSLASH,
+    KeyCode::SPACE,
+    KeyCode::RETURN
+  </autogen>
+
+  <!-- 選択部分を囲う「」-->
+  <autogen>__KeyToKey__
+    KeyCode::BACKSLASH,
+    KeyCode::X, ModifierFlag::COMMAND_L,
+    KeyCode::BRACKET_RIGHT,
+    KeyCode::RETURN,
+    KeyCode::V, ModifierFlag::COMMAND_L,
+    KeyCode::BACKSLASH,
+    KeyCode::RETURN
+  </autogen>
+
+
+
+  <!-- () -->
+  <autogen>__KeyToKey__
+    KeyCode::8,
+    KeyCode::A, ModifierFlag::CONTROL_L,
+    KeyCode::8, ModifierFlag::SHIFT_L,
+    KeyCode::RETURN,
+    KeyCode::E, ModifierFlag::CONTROL_L,
+    KeyCode::9, ModifierFlag::SHIFT_L,
+    KeyCode::RETURN
+  </autogen>
+
+
+  <!-- '' -->
+  <autogen>__KeyToKey__
+    KeyCode::7,
+    KeyCode::A, ModifierFlag::CONTROL_L,
+    KeyCode::7, ModifierFlag::SHIFT_L,
+    KeyCode::RETURN,
+    KeyCode::E, ModifierFlag::CONTROL_L,
+    KeyCode::7, ModifierFlag::SHIFT_L,
+    KeyCode::RETURN
+  </autogen>
+
+
+  <!-- Esc -->
+  <!-- <autogen>__KeyToKey__
+  KeyCode::TAB,
+  KeyCode::ESCAPE,
+</autogen> -->
+
+<!-- Esc -->
+<!-- <autogen>__KeyToKey__
+KeyCode::COMMAND_R,
+KeyCode::ESCAPE,
+</autogen> -->
+
+<!-- JKLI = 十字キー -->
+<autogen>__KeyToKey__
+  KeyCode::J,
+  KeyCode::CURSOR_LEFT
+</autogen>
+<autogen>__KeyToKey__
+  KeyCode::K,
+  KeyCode::CURSOR_DOWN
+</autogen>
+<autogen>__KeyToKey__
+  KeyCode::I,
+  KeyCode::CURSOR_UP
+</autogen>
+<autogen>__KeyToKey__
+  KeyCode::L,
+  KeyCode::CURSOR_RIGHT
+</autogen>
+
+<!-- JKLI = 十字キー -->
+<autogen>__KeyToKey__
+  KeyCode::1,
+  KeyCode::CURSOR_LEFT
+</autogen>
+<autogen>__KeyToKey__
+  KeyCode::2,
+  KeyCode::CURSOR_DOWN
+</autogen>
+<autogen>__KeyToKey__
+  KeyCode::3,
+  KeyCode::CURSOR_UP
+</autogen>
+<autogen>__KeyToKey__
+  KeyCode::4,
+  KeyCode::CURSOR_RIGHT
+</autogen>
+
+<!-- N/M = ページアップ / ダウン -->
+<autogen>__KeyToKey__
+  KeyCode::M,
+  KeyCode::PAGEUP
+</autogen>
+<autogen>__KeyToKey__
+  KeyCode::N,
+  KeyCode::PAGEDOWN
+</autogen>
+
+<!-- 修飾キー -->
+<!-- A = Option -->
+<!--  (実質A + F + j / l = 単語選択) -->
+<autogen>__KeyToKey__
+  KeyCode::A,
+  KeyCode::OPTION_L
+</autogen>
+<autogen>__KeyToKey__
+  KeyCode::JIS_EISUU,
+  KeyCode::SHIFT_L
+</autogen>
+
+<!-- 10行 ジャンプ -->
+<autogen>__KeyToKey__
+  KeyCode::Q,
+  KeyCode::OPTION_L, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L,
+
+</autogen>
+
+<!-- A = 単語選択 -->
+<autogen>__KeyToKey__
+  KeyCode::S,
+  KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L,
+  KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L, ModifierFlag::SHIFT_L,
+</autogen>
+<!-- スペース, F = Cmd -->
+<autogen>__KeyToKey__
+  KeyCode::F,
+  KeyCode::COMMAND_L
+</autogen>
+<autogen>__KeyToKey__
+  KeyCode::SPACE,
+  KeyCode::COMMAND_L
+</autogen>
+<!-- O/U = 行頭、行末 -->
+<autogen>__KeyToKey__
+  KeyCode::O,
+  KeyCode::E, ModifierFlag::CONTROL_L
+</autogen>
+<autogen>__KeyToKey__
+  KeyCode::U,
+  KeyCode::A, ModifierFlag::CONTROL_L
+</autogen>
+<!-- W/E/D = LMB/RMB/MMB -->
+<autogen>__KeyToKey__
+  KeyCode::W,
+  PointingButton::LEFT
+</autogen>
+<autogen>__KeyToKey__
+  KeyCode::E,
+  PointingButton::RIGHT
+</autogen>
+<autogen>__KeyToKey__
+  KeyCode::D,
+  PointingButton::MIDDLE
+</autogen>
+<!-- X/C/V = カット・コピー・ペースト -->
+<autogen>__KeyToKey__
+  KeyCode::X,
+  KeyCode::X, ModifierFlag::COMMAND_L
+</autogen>
+<autogen>__KeyToKey__
+  KeyCode::C,
+  KeyCode::C, ModifierFlag::COMMAND_L
+</autogen>
+<autogen>__KeyToKey__
+  KeyCode::V,
+  KeyCode::V, ModifierFlag::COMMAND_L
+</autogen>
+<!-- Y = 行コピー -->
+<autogen>__KeyToKey__
+  KeyCode::Y,
+  KeyCode::A, ModifierFlag::CONTROL_L,
+  KeyCode::E, ModifierFlag::CONTROL_L, ModifierFlag::SHIFT_L,
+  KeyCode::C, ModifierFlag::COMMAND_L
+</autogen>
+<!-- Shift + C = 行コピー -->
+<autogen>__KeyToKey__
+  KeyCode::C, ModifierFlag::CONTROL_L,
+  KeyCode::A, ModifierFlag::CONTROL_L,
+  KeyCode::E, ModifierFlag::CONTROL_L, ModifierFlag::SHIFT_L,
+  KeyCode::C, ModifierFlag::COMMAND_L
+</autogen>
+<!-- T = 行カット -->
+<autogen>__KeyToKey__
+  KeyCode::T,
+  KeyCode::A, ModifierFlag::CONTROL_L,
+  KeyCode::CURSOR_DOWN, ModifierFlag::SHIFT_L,
+  KeyCode::X, ModifierFlag::COMMAND_L
+</autogen>
+<!-- Shift + X = 行カット -->
+<autogen>__KeyToKey__
+  KeyCode::X, ModifierFlag::CONTROL_L,
+  KeyCode::A, ModifierFlag::CONTROL_L,
+  KeyCode::E, ModifierFlag::CONTROL_L, ModifierFlag::SHIFT_L,
+  KeyCode::X, ModifierFlag::COMMAND_L
+</autogen>
+
+<!-- P = 行削除 -->
+<autogen>__KeyToKey__
+  KeyCode::P,
+  KeyCode::A, ModifierFlag::CONTROL_L,
+  KeyCode::CURSOR_DOWN, ModifierFlag::SHIFT_L,
+
+  <!-- KeyCode::E, ModifierFlag::CONTROL_L, ModifierFlag::SHIFT_L, -->
+  KeyCode::FORWARD_DELETE
+</autogen>
+<!-- Z = アンドゥ -->
+<autogen>__KeyToKey__
+  KeyCode::Z,
+  KeyCode::Z, ModifierFlag::COMMAND_L
+</autogen>
+<!-- Z + Shift = リドゥ -->
+<autogen>__KeyToKey__
+  KeyCode::Z, ModifierFlag::SHIFT_L,
+  KeyCode::Z, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L,
+</autogen>
+<!-- H = F7 (カナ変換) -->
+<autogen>__KeyToKey__
+  KeyCode::H,
+  KeyCode::F7
+</autogen>
+
+<!-- 3Dビュー操作 Maya -->
+<!-- <autogen>__KeyToKey__
+KeyCode::KEY_4,
+PointingButton::LEFT, ModifierFlag::OPTION_L
+</autogen>
+<autogen>__KeyToKey__
+KeyCode::R,
+PointingButton::MIDDLE, ModifierFlag::OPTION_L
+</autogen> -->
+<!-- 3Dビュー操作 Blender -->
+<!-- <autogen>__KeyToKey__
+KeyCode::KEY_2,
+PointingButton::LEFT, ModifierFlag::COMMAND_L
+</autogen>
+<autogen>__KeyToKey__
+KeyCode::KEY_3,
+PointingButton::MIDDLE, ModifierFlag::COMMAND_L
+</autogen> -->
+<!-- セミコロン = デリート -->
+<autogen>__KeyToKey__
+  KeyCode::SEMICOLON, ModifierFlag::NONE,
+  KeyCode::DELETE,
+</autogen>
+<!-- コロン = エンター -->
+<autogen>__KeyToKey__
+  KeyCode::QUOTE, ModifierFlag::NONE,
+  KeyCode::RETURN
+</autogen>
+<!-- @ = 後ろ削除  -->
+<autogen>__KeyToKey__
+  KeyCode::BRACKET_LEFT, ModifierFlag::NONE,
+  KeyCode::FORWARD_DELETE
+</autogen>
+
+
+
+</root>
