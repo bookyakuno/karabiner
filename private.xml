@@ -1,0 +1,3110 @@
+<?xml version="1.0"?>
+<root>
+
+  <!--
+  ===============================================================
+  ===============================================================
+  ===============================================================
+  ===============================================================
+-->
+<item>  <name>「、」、「。」をすぐさま確定</name>
+  <identifier>private.commaretirn</identifier>
+  <inputmode_only>JAPANESE</inputmode_only>
+
+  <autogen>__KeyToKey__
+    KeyCode::COMMA,
+    KeyCode::COMMA,
+    KeyCode::RETURN
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::DOT,
+    KeyCode::DOT,
+    KeyCode::RETURN
+  </autogen>
+</item>
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>単発英数を無効xxx</name>
+  <identifier>remap.eisuumukouxxx</identifier>
+  <autogen>__DoublePressModifier__
+    KeyCode::JIS_EISUU,
+    KeyCode::VK_NONE,
+    KeyCode::JIS_EISUU
+  </autogen>
+</item>
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+<item>  <name>ダブルクリックは普通に</name>
+  <identifier>private.leftandeisuuxx</identifier>
+  <autogen>__DoublePressModifier__
+    PointingButton::LEFT,
+    PointingButton::LEFT,
+    PointingButton::LEFT,
+  </autogen>
+</item>
+<item>  <name>クリックした時に英数も一緒に</name>
+  <identifier>private.leftandeisuu</identifier>
+
+  <autogen>__KeyToKey__
+    PointingButton::LEFT,
+    KeyCode::JIS_EISUU,
+    PointingButton::LEFT,
+  </autogen>
+</item>
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+<item>  <name>親指シフトモード〜おりじなる〜</name>
+  <identifier> remap.oya_xxx </identifier>
+
+  <autogen>__KeyOverlaidModifier__
+    KeyCode::JIS_EISUU,
+    KeyCode::VK_MODIFIER_EXTRA1,
+    KeyCode::JIS_EISUU
+  </autogen>
+  <autogen>__KeyToKey__KeyCode::SPACE,ModifierFlag::EXTRA1,
+    KeyCode::VK_CONFIG_TOGGLE_notsave_oya_xxx,
+    KeyCode::JIS_KANA
+  </autogen>
+</item>
+<item>  <name>──────────────────────────────</name>
+</item>
+
+<item hidden="true">
+  <name>親指シフトモード〜おりじなる〜 の内容</name>
+  <!-- <identifier>private.remap.jis_enthumble_quit_xx</identifier> -->
+
+  <identifier vk_config="true">notsave.oya_xxx </identifier>
+  <autogen>__ShowStatusMessage__ † 親指シフト †
+  </autogen>
+  <inputmode_only>JAPANESE</inputmode_only>
+  <include path="oli_uso_main.xml"></include>
+</item>
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+<item>  <appendix></appendix>
+  <name>Fの旋律 スペースのモード</name>
+  <identifier> f_senritu_space.appdef </identifier>
+  <not>MAYA2014,MAYA2015,Photoshop</not>
+  <autogen>
+    __KeyOverlaidModifier__
+    KeyCode::SPACE, ModifierFlag::NONE, @begin
+    KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_simple_vi_mode_Another, @end @begin
+    KeyCode::SPACE, @end
+  </autogen>
+</item>
+
+
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+<item>  <name>英数+ スペース Esc</name>
+  <identifier>private.remap.jis_enthumble_quit</identifier>
+  <autogen>__KeyOverlaidModifier__
+    KeyCode::JIS_KANA,
+    KeyCode::VK_MODIFIER_EXTRA2,
+    KeyCode::JIS_KANA
+  </autogen>
+  <autogen>__KeyToKey__KeyCode::SPACE,ModifierFlag::EXTRA2,
+    KeyCode::ESCAPE
+  </autogen>
+</item>
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+
+
+
+<!--ーーーーーーーアプリ指定ここからーーーーーーーーーーーーーーーーーー-->
+<!--ーーーーーーーアプリ指定ここからーーーーーーーーーーーーーーーーーー-->
+<!--ーーーーーーーアプリ指定ここからーーーーーーーーーーーーーーーーーー-->
+<!--ーーーーーーーアプリ指定ここからーーーーーーーーーーーーーーーーーー-->
+
+
+  <item> <!-- アプリ指定 -->
+    <appdef><appname>Lightroom
+    </appname><equal>com.adobe.Lightroom6</equal></appdef>
+    <appdef><appname>CLIPSTUDIOPAINT
+    </appname><equal>jp.co.celsys.CLIPSTUDIOPAINT</equal></appdef>
+    <appdef><appname>Scapple
+    </appname><equal>com.literatureandlatte.scapple</equal></appdef>
+    <appdef><appname>Atom
+    </appname><equal>com.github.atom</equal></appdef>
+    <appdef><appname>Notes
+    </appname><equal>com.apple.Notes</equal></appdef>
+    <appdef><appname>TextNut
+    </appname><equal>com.edgenius.osx.TextNut</equal></appdef>
+    <appdef><appname>Vim
+    </appname><equal>org.vim.MacVim</equal></appdef>
+    <appdef><appname>3D-Coat
+    </appname><equal>com.Pilgway.-D-Coat</equal></appdef>
+    <appdef><appname>Flash
+    </appname><equal>com.adobe.Adobe Flash CC 2015.application</equal></appdef>
+    <appdef><appname>Mudbox
+    </appname><equal>com.autodesk.Mudbox</equal></appdef>
+    <appdef><appname>Paintstorm
+    </appname><equal>Paintstorm.PaintstormStudio</equal></appdef>
+    <appdef><appname>mischief-free
+    </appname><equal>com.madewithmischief.mischief-free</equal></appdef>
+    <appdef><appname>ZBrush
+    </appname><equal>com.pixologic.zbrush</equal></appdef>
+    <appdef><appname>Preview
+    </appname><equal>com.apple.Preview</equal></appdef>
+    <appdef><appname>Note
+    </appname><equal>com.apple.Note</equal></appdef>
+    <appdef><appname>Photoshop
+    </appname><equal>com.adobe.Photoshop</equal></appdef>
+    <appdef><appname>flash
+    </appname><equal>com.adobe.Adobe Flash CC 2014.application</equal></appdef>
+    <appdef><appname>iTunes
+    </appname><equal>com.apple.iTunes</equal></appdef>
+    <appdef><appname>GIMP
+    </appname><equal>de.lisanet.gimp</equal></appdef>
+    <appdef><appname>CloudAlpaca
+    </appname><equal>com.yourcompany.CloudAlpaca</equal></appdef>
+    <appdef><appname>Inventor Fusion
+    </appname><equal>com.autodesk.mas.fusion</equal></appdef>
+    <appdef><appname>MAYA2015
+    </appname><equal>com.autodesk.Maya.2015</equal></appdef>
+    <appdef><appname>MAYA2014
+    </appname><equal>com.autodesk.Maya.2014</equal></appdef>
+    <appdef><appname>Chrome
+    </appname><equal>com.google.Chrome</equal></appdef>
+    <appdef><appname>Finder
+    </appname><equal>com.apple.finder</equal></appdef>
+    <appdef><appname>TweetDeck
+    </appname><equal>com.twitter.TweetDeck</equal></appdef>
+    <appdef><appname>virtualbox
+    </appname><equal>org.virtualbox.app.VirtualBoxVM</equal></appdef>
+    <appdef><appname>Blender
+    </appname><equal>org.blenderfoundation.blender</equal></appdef>
+    <appdef><appname>AE
+    </appname><equal>com.adobe.AfterEffects</equal></appdef>
+    <appdef><appname>Preview
+    </appname><equal>com.adobe.dreamweaver</equal></appdef>
+    <appdef><appname>Dreamweaver
+    </appname><equal>com.adobe.dreamweaver-15.0</equal></appdef>
+    <appdef><appname>Illustrator
+    </appname><equal>com.adobe.illustrator</equal></appdef>
+    <appdef><appname>Firefox
+    </appname><equal>org.mozilla.firefox</equal></appdef>
+    <appdef><appname>GarageBand
+    </appname><equal>com.apple.garageband10</equal></appdef>
+
+  </item>
+
+
+
+
+
+<!--ーーーーーーーアプリ指定ここまでーーーーーーーーーーーーーーーーーー-->
+<!--ーーーーーーーアプリ指定ここまでーーーーーーーーーーーーーーーーーー-->
+<!--ーーーーーーーアプリ指定ここまでーーーーーーーーーーーーーーーーーー-->
+<!--ーーーーーーーアプリ指定ここまでーーーーーーーーーーーーーーーーーー-->
+
+
+
+
+<item>  <name>◆ 「F」の旋律 ◆</name>
+  <appendix></appendix>
+  <appendix></appendix>
+  <appendix>JKLI …… 十字キー</appendix>
+  <appendix>O/U …… 行頭、行末</appendix>
+  <appendix>N/M …… ページアップ/ダウン</appendix>
+  <appendix>H …… F7(カナ変換)</appendix>
+  <appendix></appendix>
+  <appendix>W/E/D …… Left / Right / Middle マウス</appendix>
+  <appendix>X/C/V …… カット・コピー・ペースト</appendix>
+  <appendix>Y …… 行コピー</appendix>
+  <appendix>P …… 行削除</appendix>
+  <appendix>Z …… アンドゥ</appendix>
+  <appendix>Z+Shift …… リドゥ</appendix>
+  <appendix>ぼつA …… Option (実質A+F+j/l …… 単語移動)</appendix>
+  <appendix>S …… カーソルのある単語を選択</appendix>
+
+
+  <appendix></appendix>
+  <appendix>日本語入力補助</appendix>
+  <appendix></appendix>
+
+  <appendix>、。？！は入力後すぐさま確定</appendix>
+  <appendix>「は、行を囲う</appendix>
+  <appendix>Q …… "……"</appendix>
+  <appendix>Q …… " …… "</appendix>
+  <appendix>+ …… " + "</appendix>
+  <appendix>」選択文字を囲う(※切り取りを使用するのでクリップボードを使用)</appendix>
+  <appendix>スペース + F …… Cmd (スペース + F + ↑/↓の場合はページアップ/ダウン)</appendix>
+  <appendix></appendix>
+  <appendix></appendix>
+  <appendix>認識の早さは「Key Repeat」タブにある「__BlockUntilKeyUp__timeout」で調整できる。
+  </appendix>
+  <appendix>「Key Overlaid Modifer」の「Timeout」の値を下げるとよりこの機能の認識が早くなる。
+    自分は250くらいに設定。
+  </appendix>
+  <appendix></appendix>
+  <not>GarageBand</not>    <!-- GarageBandでは除外 -->
+  <identifier> private03.appdef </identifier>
+  <autogen>
+    __KeyOverlaidModifier__
+    KeyCode::F, ModifierFlag::NONE, @begin
+    KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_simple_vi_mode_Another, @end @begin
+    KeyCode::F, @end
+  </autogen>
+</item>
+
+
+<item hidden="true">
+  <identifier vk_config="true">notsave.simple_vi_mode_Another </identifier>
+  <include path="senritu_main.xml"></include>
+</item>
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>◆ Qテンキー ◆</name>
+  <identifier> anfmb </identifier>
+  <appendix></appendix>
+  <appendix>Q」を押している間、234wersdfがテンキーに</appendix>
+  <appendix>スペース,s,d,f,w,e,r,2,3,4</appendix>
+  <appendix>↓ ↓ ↓</appendix>
+  <appendix>0,1,2,3,4,5,6,7,8,9</appendix>
+
+  <autogen>
+    __KeyOverlaidModifier__
+    KeyCode::Q, ModifierFlag::NONE, @begin
+    KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_simple_vi_mode_Another_Blender, @end @begin
+    KeyCode::Q, @end
+  </autogen>
+</item>
+<!--ここから-->
+<item hidden="true">
+  <identifier vk_config="true">notsave.simple_vi_mode_Another_Blender </identifier>
+  {{ SIMPLE_VI_MODE_EXTRA }}
+  <autogen>
+    __BlockUntilKeyUp__
+    KeyCode::Q
+  </autogen>
+  <!-- 秒数を入力30* -->
+  <autogen>__KeyToKey__
+              KeyCode::A,
+              KeyCode::3,
+              KeyCode::0,
+              KeyCode::QUOTE,ModifierFlag::SHIFT_L
+  </autogen>
+  <!-- テンキー スペースに0 -->
+  <autogen>__KeyToKey__
+              KeyCode::SPACE,
+              KeyCode::KEYPAD_0
+  </autogen>
+  <!-- 数字 -->
+  <autogen>__KeyToKey__
+              KeyCode::X,
+              KeyCode::KEYPAD_0
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::S,
+              KeyCode::KEYPAD_1
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::D,
+              KeyCode::KEYPAD_2
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::F,
+              KeyCode::KEYPAD_3
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::W,
+              KeyCode::KEYPAD_4
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::E,
+              KeyCode::KEYPAD_5
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::R,
+              KeyCode::KEYPAD_6
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::KEY_2,
+              KeyCode::KEYPAD_7
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::KEY_3,
+              KeyCode::KEYPAD_8
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::KEY_4,
+              KeyCode::KEYPAD_9
+  </autogen>
+  <!-- エンター、デリート -->
+  <autogen>__KeyToKey__
+              KeyCode::KEY_5,
+              KeyCode::ENTER
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::T,
+              KeyCode::DELETE
+  </autogen>
+  <!-- エンター、デリート -->
+  <autogen>__KeyToKey__
+              KeyCode::V,
+              KeyCode::ENTER
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::C,
+              KeyCode::DELETE
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::Y,
+              KeyCode::QUOTE
+  </autogen>
+  <!-- 四則演算 -->
+  <autogen>__KeyToKey__
+              KeyCode::KEY_6,
+              KeyCode::KEYPAD_SLASH
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::Y,
+              KeyCode::KEYPAD_MULTIPLY
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::G,
+              KeyCode::KEYPAD_MINUS
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::H,
+              KeyCode::KEYPAD_PLUS
+  </autogen>
+  <!-- コンマ -->
+  <autogen>__KeyToKey__
+              KeyCode::B,
+              KeyCode::DOT
+  </autogen>
+  
+</item>
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>F1,F2 …… エンター/デリート</name>
+  <identifier> gthyjuk.appdef </identifier>
+  <autogen>__KeyToKey__
+    KeyCode::F1,ModifierFlag::NONE ,
+    KeyCode::ENTER, ModifierFlag::NONE,
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::F2,ModifierFlag::NONE ,
+    KeyCode::DELETE, ModifierFlag::NONE,
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+
+
+<item>  <name>BACKQUOTE Cmd</name>
+  <identifier> fasdfnlll.appdef </identifier>
+  <autogen>__KeyToKey__
+    KeyCode::FORWARD_DELETE,ModifierFlag::SHIFT_L,
+    KeyCode::JIS_YEN
+  </autogen>
+  <!--
+  <autogen>__KeyToKey__
+  KeyCode::JIS_YEN,ModifierFlag::NONE,
+  KeyCode::FORWARD_DELETE
+</autogen> -->
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>Vim …… Esc & 英数</name>
+  <identifier> private.app_terminal_esc_with_eisuu </identifier>
+  <only>Vim</only>
+  <autogen>--KeyToKey--
+    KeyCode::ESCAPE,
+    KeyCode::ESCAPE,
+    KeyCode::JIS_EISUU
+  </autogen>
+  <autogen>--KeyToKey--
+    KeyCode::JIS_BRACKET_LEFT, VK_CONTROL,
+    KeyCode::JIS_BRACKET_LEFT, VK_CONTROL,
+    KeyCode::JIS_EISUU
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>Atom …… かっこを英数押してから</name>
+  <identifier> sdfagneazoo.appdef </identifier>
+  <only>Atom</only>
+  <!-- Notes -->
+  <autogen>--KeyToKey--
+    KeyCode::8, ModifierFlag::SHIFT_L,
+    KeyCode::JIS_EISUU,ModifierFlag::CONTROL_L,
+    KeyCode::8, ModifierFlag::SHIFT_L
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>TextNut …… Tabで上げ下げ</name>
+  <identifier> sdfasdfazzoo.appdef </identifier>
+  <only>TextNut</only>
+  <!-- Notes -->
+  <autogen>--KeyToKey--
+    KeyCode::TAB,
+    KeyCode::A,ModifierFlag::CONTROL_L,
+    KeyCode::TAB
+  </autogen>
+  <autogen>--KeyToKey--
+    KeyCode::TAB,ModifierFlag::SHIFT_L,
+    KeyCode::A,ModifierFlag::CONTROL_L,
+    KeyCode::TAB,ModifierFlag::SHIFT_L,
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name> Lightroom 色々変更 </name>
+  <identifier> Lightroom_ax.appdef </identifier>
+  <uielementrole_not>AXTextArea, AXTextField</uielementrole_not>
+  <only>Lightroom</only>
+  <autogen>__KeyToKey__
+    KeyCode::1,
+    KeyCode::1, ModifierFlag::SHIFT_L,
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::2,
+    KeyCode::2, ModifierFlag::SHIFT_L,
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::3,
+    KeyCode::3, ModifierFlag::SHIFT_L,
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::4,
+    KeyCode::4, ModifierFlag::SHIFT_L,
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::5,
+    KeyCode::5, ModifierFlag::SHIFT_L,
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::Q,
+    KeyCode::Q,
+    KeyCode::CURSOR_RIGHT
+
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::W,
+    KeyCode::KEYPAD_6, ModifierFlag::SHIFT_L,
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::E,
+    KeyCode::KEYPAD_7, ModifierFlag::SHIFT_L,
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::R,
+    KeyCode::KEYPAD_8, ModifierFlag::SHIFT_L,
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::T,
+    KeyCode::KEYPAD_9, ModifierFlag::SHIFT_L,
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::Y,
+    KeyCode::Y, ModifierFlag::CONTROL_L,
+    KeyCode::CURSOR_RIGHT
+
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::JIS_UNDERSCORE,
+    KeyCode::DELETE,
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name> FORWARD_DELETE \ </name>
+  <identifier> asbbbblll.appdef </identifier>
+  <autogen>__KeyToKey__
+    KeyCode::JIS_YEN,ModifierFlag::CONTROL_L ,
+    KeyCode::JIS_YEN, ModifierFlag::OPTION_L,
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>mischief-free ブラシサイズ Q,W</name>
+  <identifier> asdfasdfnlll.appdef </identifier>
+  <uielementrole_not>AXTextArea, AXTextField</uielementrole_not>
+  <only>mischief-free</only>
+  <autogen>__KeyToKey__
+    KeyCode::Q,ModifierFlag::NONE ,
+    KeyCode::BRACKET_RIGHT, ModifierFlag::NONE,
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::W,ModifierFlag::NONE ,
+    KeyCode::BACKSLASH, ModifierFlag::NONE
+  </autogen>
+  B 、X …… ZX
+  <autogen>__KeyToKey__
+    KeyCode::Z,ModifierFlag::NONE ,
+    KeyCode::B, ModifierFlag::NONE
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::X,ModifierFlag::NONE ,
+    KeyCode::E, ModifierFlag::NONE
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>W + JKLI 10行ジャンプ</name>
+  <identifier>private.remap.jis_enthumble_quit_x</identifier>
+  <autogen>__KeyOverlaidModifier__
+    KeyCode::W,
+    KeyCode::VK_MODIFIER_EXTRA1,
+    KeyCode::W
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::K,ModifierFlag::EXTRA1,
+    KeyCode::CURSOR_DOWN,ModifierFlag::COMMAND_L,ModifierFlag::CONTROL_L,ModifierFlag::OPTION_L,
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::I,ModifierFlag::EXTRA1,
+    KeyCode::CURSOR_UP,ModifierFlag::COMMAND_L,ModifierFlag::CONTROL_L,ModifierFlag::OPTION_L,
+  </autogen>
+
+
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>Scapple ……Shift + リターン 新規作成</name>
+  <identifier> afsfScappleasazzl.appdef </identifier>
+  <only>Scapple</only>
+  <autogen>__KeyToKey__
+    KeyCode::RETURN ,ModifierFlag::CONTROL_L,
+    KeyCode::RETURN ,
+    KeyCode::RETURN ,
+    KeyCode::RETURN
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>Blender ……Ctrl + X = DELETE</name>
+  <identifier> afsfdnllasazzl.appdef </identifier>
+  <only>Blender</only>
+  <autogen>__KeyToKey__
+    KeyCode::X ,ModifierFlag::OPTION_L, ModifierFlag::NONE,
+    KeyCode::DELETE
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::Z ,ModifierFlag::OPTION_L, ModifierFlag::NONE,
+    KeyCode::ENTER
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::X ,ModifierFlag::OPTION_L, ModifierFlag::COMMAND_L, ModifierFlag::NONE,
+    KeyCode::DELETE , ModifierFlag::OPTION_L
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>flash ……スペース = 再生</name>
+  <identifier> afsfdnsgaozl.appdef </identifier>
+  <uielementrole_not>AXTextArea, AXTextField</uielementrole_not>
+  <only>Flash</only>
+  <autogen>__KeyToKey__
+    KeyCode::SPACE ,ModifierFlag::NONE,
+    KeyCode::ENTER
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::TAB ,ModifierFlag::NONE,
+    KeyCode::SPACE
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>メモ ……Cmd + ； …… Cmd + +</name>
+  <identifier> afsahl.appdef </identifier>
+  <only>Note</only>
+  <autogen>__KeyToKey__
+    KeyCode::SEMICOLON , ModifierFlag::COMMAND_L,
+    KeyCode::KEYPAD_PLUS , ModifierFlag::COMMAND_L,
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::S , ModifierFlag::CONTROL_L,
+    KeyCode::PAGEUP
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::A , ModifierFlag::CONTROL_L,
+    KeyCode::PAGEDOWN
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>Paintstorm ……Tab = スペース、 Ctrl + Tab = Tab</name>
+  <identifier> afsfdnlll.appdef </identifier>
+  <only>Paintstorm</only>
+  <autogen>__KeyToKey__
+    KeyCode::TAB ,
+    KeyCode::SPACE
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!-- ▼ Photoshopのアプリを設定 ▼ -->
+<appdef>
+  <appname>Photoshop</appname>
+  <equal>com.adobe.Photoshop</equal>
+</appdef>
+<!-- ▲ Photoshopのアプリを設定 ▲ -->
+
+<item>  <name>PhotoshopのHUDカラーピッカーをショートカットにする</name>
+
+  <appendix></appendix>
+  <appendix>Ctrl + S   = HUDカラーピッカー</appendix>
+  <appendix>Tab        = スペース</appendix>
+  <appendix>Tab + Ctrl = Tab</appendix>
+  <appendix></appendix>
+
+  <!-- ▼ テキスト入力で無効化 ▼ -->
+  <uielementrole_not>AXTextArea, AXTextField</uielementrole_not>
+  <!-- ▲ テキスト入力で無効化 ▲ -->
+  <identifier> asdfnlll.appdef </identifier>
+  <only>Photoshop</only>
+
+  <!-- ▼ HUDカラーピッカー …… Ctrl + S ▼ -->
+  <autogen>__KeyToKey__
+    KeyCode::S, ModifierFlag::CONTROL_L,
+    PointingButton::LEFT,
+    ModifierFlag::OPTION_L,ModifierFlag::COMMAND_L,ModifierFlag::CONTROL_L,
+  </autogen>
+  <!-- ▲ HUDカラーピッカー …… Ctrl + S ▲ -->
+
+  <!-- ▼ Tab = スペース ▼ -->
+  <autogen>__KeyToKey__
+    KeyCode::TAB, ModifierFlag::NONE,
+    KeyCode::SPACE,
+  </autogen>
+  <!-- ▲ Tab = スペース ▲ -->
+
+  <!-- ▼ Ctrl + Tab = Tab ▼ -->
+  <autogen>__KeyToKey__
+    KeyCode::TAB, ModifierFlag::CONTROL_L,
+    KeyCode::TAB
+  </autogen>
+  <!-- ▲ Ctrl + Tab = Tab ▲ -->
+
+</item>
+
+
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>Illustrator ……Tab = スペース、 Ctrl + Tab = Tab</name>
+  <identifier> diasuyu.appdef </identifier>
+  <only>Illustrator</only>
+  <autogen>__KeyToKey__
+    KeyCode::TAB, ModifierFlag::NONE,
+    KeyCode::SPACE,
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::TAB, ModifierFlag::CONTROL_L,
+    KeyCode::TAB,
+  </autogen>
+</item>
+<autogen>__KeyToKey__
+  PointingButton::MIDDLE, ModifierFlag::NONE,
+  KeyCode::SPACE,
+</autogen>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>ZBrush ……CONTROL_L to OPTION_L</name>
+  <identifier> ZBrushmmm.appdef </identifier>
+  <only>ZBrush</only>
+  <autogen>__KeyToKey__
+    KeyCode::CONTROL_L,
+    KeyCode::OPTION_L
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::OPTION_L,
+    KeyCode::CONTROL_L,
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>Maya ……Cmd + Shift + RMB>> Shift + MMB、マーキングメニューCtrl + Q</name>
+  <identifier> dituyu.appdef </identifier>
+  <only>MAYA2015</only>
+  <autogen>__KeyToKey__
+    PointingButton::RIGHT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L,
+    PointingButton::MIDDLE, ModifierFlag::SHIFT_L,
+  </autogen>
+</item>
+<autogen>__KeyToKey__
+  KeyCode::Q, ModifierFlag::OPTION_L,
+  KeyCode::KEY_7, ModifierFlag::OPTION_L,
+</autogen>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>After Effects …… 視点操作をBlenderに似せる</name>
+  <identifier> diajuuks1.appdef </identifier>
+  <only>AE</only>
+  <autogen>__KeyToKey__
+    PointingButton::RIGHT, ModifierFlag::COMMAND_L,
+    PointingButton::MIDDLE,
+  </autogen>
+</item>
+<item>  <name>After Effects …… 全画面 shift + SPACE</name>
+  <identifier> diasejsas1.appdef </identifier>
+  <only>AE</only>
+  <autogen>__KeyToKey__
+    KeyCode::SPACE, ModifierFlag::SHIFT_L,
+    KeyCode::BRACKET_LEFT,
+  </autogen>
+</item>
+<item>  <name>Maya …… 英数 …… MMB</name>
+  <identifier> diasejssfdfras1.appdef </identifier>
+  <only>MAYA2015</only>
+  <autogen>__KeyToKey__
+    KeyCode::JIS_EISUU, ModifierFlag::SHIFT_L,
+    KeyCode::JIS_EISUU
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::JIS_EISUU, ModifierFlag::NONE,
+    PointingButton::MIDDLE
+  </autogen>
+  <autogen>
+    __KeyToKey__
+    KeyCode::KEY_9, ModifierFlag::SHIFT_L,
+    PointingButton::MIDDLE, ModifierFlag::SHIFT_L,
+  </autogen>
+  <autogen>_ _KeyToKey__
+    KeyCode::TAB, ModifierFlag::NONE,
+    KeyCode::C, ModifierFlag::CONTROL_L,ModifierFlag::COMMAND_L
+  </autogen>
+</item>
+<!-- =============================================================== =============================================================== =============================================================== -->
+<item>  <name>flash…… alt + ホイール >> ズーム</name>
+  <identifier> e0aasdsas1.appdef </identifier>
+  <only>flash</only>
+  <autogen>__KeyToKey__
+    KeyCode::VK_MOUSEKEY_SCROLL_UP, ModifierFlag::OPTION_L,
+    KeyCode::VK_MOUSEKEY_SCROLL_UP, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L,
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::VK_MOUSEKEY_SCROLL_DOWN, ModifierFlag::OPTION_L,
+    KeyCode::VK_MOUSEKEY_SCROLL_DOWN, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L,
+  </autogen>
+</item>
+ブラシサイズ
+<autogen>
+  __KeyToKey__
+  KeyCode::KEY_1,ModifierFlag::COMMAND_L,
+  KeyCode::VK_MOUSEKEY_SCROLL_DOWN, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L,
+</autogen>
+<autogen>
+  __KeyToKey__
+  KeyCode::KEY_2,ModifierFlag::COMMAND_L,
+  KeyCode::VK_MOUSEKEY_SCROLL_UP, ModifierFlag::CONTROL_L, ModifierFlag::OPTION_L,
+</autogen>
+<!--
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+-->
+
+<item>  <name>Photoshop…… ドラッグでズーム</name>
+  <identifier> die0asas1.appdef </identifier>
+  <only>Photoshop</only>
+  <autogen>__KeyToKey__
+    PointingButton::RIGHT,
+    KeyCode::SPACE, ModifierFlag::COMMAND_L,
+    PointingButton::RIGHT,
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::JIS_EISUU,
+    PointingButton::LEFT, ModifierFlag::COMMAND_L,ModifierFlag::OPTION_L, ModifierFlag::CONTROL_L
+
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>GIMP …… マウスホイール設定 test</name>
+  <identifier> sz14q39.appdef </identifier>
+  <only>GIMP</only>
+  ブラシサイズ
+  <autogen>
+    __KeyToKey__
+    KeyCode::KEY_1,ModifierFlag::COMMAND_L,
+    KeyCode::VK_MOUSEKEY_SCROLL_DOWN, ModifierFlag::CONTROL_L, ModifierFlag::OPTION_L,
+  </autogen>
+  <autogen>
+    __KeyToKey__
+    KeyCode::KEY_2,ModifierFlag::COMMAND_L,
+    KeyCode::VK_MOUSEKEY_SCROLL_UP, ModifierFlag::CONTROL_L, ModifierFlag::OPTION_L,
+  </autogen>
+  不透明度
+  <autogen>
+    __KeyToKey__
+    KeyCode::KEY_1,ModifierFlag::OPTION_L,
+    KeyCode::VK_MOUSEKEY_SCROLL_DOWN, ModifierFlag::OPTION_L,
+  </autogen>
+  <autogen>
+    __KeyToKey__
+    KeyCode::KEY_2,ModifierFlag::OPTION_L,
+    KeyCode::VK_MOUSEKEY_SCROLL_UP, ModifierFlag::OPTION_L,
+  </autogen>
+</item>
+<uielementrole_not>AXTextArea, AXTextField</uielementrole_not>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>Blender …… ペンタブ …… MB4 >>ズーム</name>
+  <identifier> frfrsfase3rgt.appdef </identifier>
+  <autogen>
+    __KeyToKey__
+    PointingButton::BUTTON4 ,
+    PointingButton::MIDDLE ,ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L
+  </autogen>
+</item>
+<item>  <name>iTunes …… 音量変更 …… ドット コンマ</name>
+  <only>iTunes</only>
+  <identifier> frfrgrgt.appdef </identifier>
+  <uielementrole_not>AXTextArea, AXTextField</uielementrole_not>
+  <autogen>
+    __KeyToKey__
+    KeyCode::DOT,
+    KeyCode::CURSOR_UP, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L
+  </autogen>
+  <autogen>
+    __KeyToKey__
+    KeyCode::COMMA,
+    KeyCode::CURSOR_DOWN, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L
+  </autogen>
+  JKLI = 十字キー
+  <autogen>__KeyToKey__
+    KeyCode::J,
+    KeyCode::CURSOR_DOWN
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::K,
+    KeyCode::CURSOR_UP
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::H,
+    KeyCode::CURSOR_LEFT
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::L,
+    KeyCode::CURSOR_RIGHT
+  </autogen>
+  N/M = ページアップ、ダウン
+  <autogen>__KeyToKey__
+    KeyCode::M,
+    KeyCode::PAGEUP
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::N,
+    KeyCode::PAGEDOWN
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>Inventor Fusion……⌘+ 右で平行移動</name>
+  <identifier> szxcas1.appdef </identifier>
+  <only>Inventor Fusion</only>
+  <autogen>
+    __KeyToKey__
+    PointingButton::RIGHT,ModifierFlag::COMMAND_L,
+    PointingButton::MIDDLE,
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+
+<item>  <name>カーソル以前を削除</name>
+  <identifier> cursor_back_del.appdef </identifier>
+  <autogen>__KeyToKey__
+    KeyCode::L, ModifierFlag::CONTROL_L,
+    KeyCode::A, ModifierFlag::CONTROL_L, ModifierFlag::SHIFT_L,
+    KeyCode::DELETE,
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+<item>  <name>Inventor Fusion……⌘+ 左で回転</name>
+  <identifier> szasxcas1.appdef </identifier>
+  <only>Inventor Fusion</only>
+  <autogen>
+    __KeyToKey__
+    PointingButton::LEFT,ModifierFlag::COMMAND_L,
+    PointingButton::MIDDLE,ModifierFlag::SHIFT_L
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>Blender …… カーソルダブルクリック</name>
+  <identifier> pra0avsas1.appdef </identifier>
+  <autogen>
+    __KeyToKey__
+    PointingButton::MIDDLE,ModifierFlag::COMMAND_L,
+    PointingButton::RIGHT, ModifierFlag::COMMAND_L
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>Dreamweaver ……  Ctrl + ⌘+QでPタグ</name>
+  <identifier> private0asas1.appdef </identifier>
+  <only>Dreamweaver</only>
+  <autogen>__KeyToKey__
+    KeyCode::Q, ModifierFlag::COMMAND_L, ModifierFlag::CONTROL_L,
+    KeyCode::P, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L,
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>Command+LeftClick to Mouse Button 4</name>
+  <identifier> remap.pointing_cmdLeftcassxalick2button4 </identifier>
+  <autogen>__KeyToKey__
+    KeyCode::KEYPAD_4,
+    PointingButton::BUTTON4
+  </autogen>
+</item>
+<item>  <name>sdasouse Button 4</name>
+  <identifier> remap.pointisdfasvcgng_cmdLeftclick2button4 </identifier>
+  <autogen>__KeyToKey__
+    PointingButton::LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND,
+    PointingButton::BUTTON4
+  </autogen>
+</item>
+<!--
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>オリジナルvirtual Vim</name>
+  <identifier vk_config="true">notsave.My_Vim </identifier>
+  <autogen>__ShowStatusMessage__ My_vim
+  </autogen>
+  ページアップ、ダウン
+  <autogen>__KeyToKey__
+    KeyCode::M,
+    KeyCode::PAGEUP
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::N,
+    KeyCode::PAGEDOWN
+  </autogen>
+  十字キー
+  <autogen>__KeyToKey__
+    KeyCode::J,
+    KeyCode::CURSOR_LEFT
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::K,
+    KeyCode::CURSOR_DOWN
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::I,
+    KeyCode::CURSOR_UP
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::L,
+    KeyCode::CURSOR_RIGHT
+  </autogen>
+</item>
+トリガー
+<item>  <name>"My_Vim"をオン(未完成)</name>
+  <identifier> remap.My_Vim </identifier>
+  <autogen>__KeyToKey__
+    KeyCode::F8, ModifierFlag::NONE,
+    KeyCode::VK_CONFIG_TOGGLE_notsave_My_Vim
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>=========================▼▼▼ キー入れ替え ▼▼▼=========================</name>
+  <identifier> privateaaa002dsfd93.appdef </identifier>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>「 ^ 」をCOMMAND_Rに</name>
+  <identifier> privateaaa009aa3.appdef </identifier>
+  <autogen>--KeyToKey--
+    KeyCode::EQUAL,
+    KeyCode::COMMAND_R
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>AE …… テキストフィールド以外でスペースキーは再生</name>
+  <identifier> private.hjkl_keys_to_arrow_keys_in_AE </identifier>
+  <uielementrole_not>AXTextArea, AXTextField</uielementrole_not>
+  <only>AE</only>
+  <modifier_only>
+    ModifierFlag::NONE, ModifierFlag::SHIFT_L | ModifierFlag::NONE, ModifierFlag::SHIFT_R | ModifierFlag::NONE,
+  </modifier_only>
+  <autogen>__KeyToKey__
+    KeyCode::SPACE,
+    KeyCode::KEY_0, ModifierFlag::CONTROL_L,
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>Control+「；」でセミコロン入力</name>
+  <identifier> privateaaa0029aa3.appdef </identifier>
+  <autogen>--KeyToKey--
+    KeyCode::SEMICOLON, ModifierFlag::CONTROL_L,
+    KeyCode::SEMICOLON, ModifierFlag::NONE
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>Control+「：」でコロン入力</name>
+  <identifier> privateaaasdfaa0029aa3.appdef </identifier>
+  <autogen>--KeyToKey--
+    KeyCode::QUOTE, ModifierFlag::CONTROL_L,
+    KeyCode::QUOTE, ModifierFlag::NONE
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>Blender …… 英数 …… DELETE</name>
+  <only>Blender</only>
+  <identifier> privateaaa00293.appdef </identifier>
+  <autogen>--KeyToKey--
+    KeyCode::JIS_EISUU,
+    KeyCode::VK_MOUSEKEY_BUTTON_LEFT,
+  </autogen>
+  <autogen>--KeyToKey--
+    KeyCode::DELETE,ModifierFlag::CONTROL_L,
+    KeyCode::JIS_EISUU,
+  </autogen>
+</item>
+KeyCode::KEYPAD_0, ===============================================================
+<item>  <name>Blender、ダブルoptionクリック(英数キー)で「0」</name>
+  <only>Blender</only>
+  <identifier> privateaaa0029ssa3.appdef </identifier>
+  <autogen>__DoublePressModifier__
+    KeyCode::OPTION_L,
+    KeyCode::OPTION_L, ModifierFlag::NONE,
+    KeyCode::KEY_0, ModifierFlag::NONE
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>virtualbox ⌘_LをControlに</name>
+  <only>virtualbox</only>
+  <identifier> privateaaa0029odd3.appdef </identifier>
+  <autogen>--KeyToKey--
+    KeyCode::COMMAND_L,
+    KeyCode::CONTROL_L,
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>virtualbox Controlを⌘_Lに</name>
+  <only>virtualbox</only>
+  <identifier> privateaaa0029odd4.appdef </identifier>
+  <autogen>--KeyToKey--
+    KeyCode::CONTROL_L,
+    KeyCode::COMMAND_L
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>Chromeのみ、⌘_RとFNを入れ替えるお</name>
+  <item>    <name>⌘_RとFNを入れ替え
+    </name>
+    <only>Chrome</only>
+    <identifier> privateaaa01.appdef </identifier>
+    <autogen>--KeyToKey--
+      KeyCode::FN,
+      KeyCode::COMMAND_R, ModifierFlag::NONE
+    </autogen>
+  </item>
+  <item>    <name>Fnと⌘_Rを入れ替え
+    </name>
+    <only>Chrome</only>
+    <identifier> privateaaa02.appdef </identifier>
+    <autogen>--KeyToKey--
+      KeyCode::COMMAND_R,
+      KeyCode::FN, ModifierFlag::NONE
+    </autogen>
+  </item>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>Maya…… 9 shift …… MIDDLE + Shift</name>
+  <identifier> szxs4.appdef </identifier>
+  <only>MAYA2014,MAYA2015</only>
+  <autogen>
+    __KeyToKey__
+    KeyCode::KEY_9, ModifierFlag::CONTROL_L,
+    KeyCode::VK_MOUSEKEY_BUTTON_MIDDLE,ModifierFlag::SHIFT_L,
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<autogen>
+  __KeyToKey__
+  KeyCode::JIS_EISUU,
+  KeyCode::OPTION_L
+</autogen>
+<autogen>
+  __DoublePressModifier__
+  KeyCode::OPTION_L,
+  KeyCode::OPTION_L,
+  KeyCode::JIS_EISUU,
+</autogen>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>Maya……⌘+ 右で平行移動</name>
+  <identifier> pra0azsas1.appdef </identifier>
+  <only>MAYA2014,MAYA2015</only>
+  <autogen>
+    __KeyToKey__
+    PointingButton::RIGHT,ModifierFlag::COMMAND_L,
+    PointingButton::MIDDLE, ModifierFlag::COMMAND_L
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>3D-Coat……⌘+ LMBでビュー回転</name>
+  <identifier> prazii33s1.appdef </identifier>
+  <only>3D-Coat</only>
+  <autogen>
+    __KeyToKey__
+    PointingButton::LEFT,ModifierFlag::COMMAND_L,
+    PointingButton::LEFT,ModifierFlag::OPTION_L,
+  </autogen>
+  <autogen>
+    __KeyToKey__
+    PointingButton::RIGHT,ModifierFlag::OPTION_L,
+    PointingButton::MIDDLE,ModifierFlag::OPTION_L,
+  </autogen>
+  <autogen>
+    __KeyToKey__
+    PointingButton::MIDDLE,ModifierFlag::OPTION_L,
+    PointingButton::RIGHT,ModifierFlag::OPTION_L,
+  </autogen>
+  <autogen>
+    __KeyToKey__
+    KeyCode::COMMAND_L,
+    KeyCode::OPTION_L,
+  </autogen>
+  <autogen>
+    __KeyToKey__
+    KeyCode::OPTION_L,
+    KeyCode::COMMAND_L,
+  </autogen>
+  <autogen>
+    __KeyToKey__
+    KeyCode::TAB,ModifierFlag::OPTION_L,
+    KeyCode::TAB,ModifierFlag::COMMAND_L,
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>Mudbox……⌘+ 右で平行移動</name>
+  <identifier> pzsaass1.appdef </identifier>
+  <only>Mudbox</only>
+  <autogen>
+    __KeyToKey__
+    PointingButton::RIGHT,ModifierFlag::COMMAND_L,
+    PointingButton::MIDDLE, ModifierFlag::COMMAND_L
+  </autogen>
+  <autogen>
+    __KeyToKey__
+    KeyCode::A, ModifierFlag::CONTROL_L,
+    KeyCode::B
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>Blender、「右クリック」をマウス中クリックに</name>
+  <identifier> psyn1dx.appdef </identifier>
+  <only>Blender</only>
+  <autogen>
+    __KeyToKey__
+    PointingButton::RIGHT,
+    PointingButton::MIDDLE
+  </autogen>
+</item>
+<item>  <name>Blender、「中クリック」をマウス右クリックに</name>
+  <identifier> psyn1x.appdef </identifier>
+  <only>Blender</only>
+  <autogen>
+    __KeyToKey__
+    PointingButton::MIDDLE,
+    PointingButton::RIGHT
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>「；」をDELETEに</name>
+  <identifier> private02DELETE02.appdef </identifier>
+  <autogen>__KeyToKey__
+    KeyCode::SEMICOLON, ModifierFlag::NONE,
+    KeyCode::DELETE, ModifierFlag::NONE
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>「 ： 」をリターンに</name>
+  <identifier> private_Return02.appdef </identifier>
+  <autogen>__KeyToKey__
+    KeyCode::QUOTE, ModifierFlag::NONE,
+    KeyCode::RETURN
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>「CONTROL + @」を@に</name>
+  <identifier> private_alkjaaaav.appdef </identifier>
+  <autogen>__KeyToKey__
+    KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L,
+    KeyCode::BRACKET_LEFT
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>「@」を後ろ消しに</name>
+  <identifier> private_Back.appdef </identifier>
+  <autogen>__KeyToKey__
+    KeyCode::BRACKET_LEFT, ModifierFlag::NONE,
+    KeyCode::FORWARD_DELETE
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+
+<item>  <name>=========================▼▼▼ 高度な設定 ▼▼▼=========================</name>
+</item>
+<!--ーーーーーーーーーーーーーーーーーーーーーーーーー--> <!--ーーーーーーーーーーーーーーーーーーーーーーーーー--> <!--ーーーーーーーーーーーーーーーーーーーーーーーーー--> <!--ーーーーーーーーーーーーーーーーーーーーーーーーー-->
+<item>  <name>「V」を押している間、wer3が十字キーに</name>
+  <not>MAYA2014,MAYA2015</not>
+  <identifier> privatzxcve03w.appdef </identifier>
+  <autogen>
+    __KeyOverlaidModifier__
+    KeyCode::V, ModifierFlag::NONE, @begin
+    KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_simple_vi_mode_Another_wer3, @end @begin
+    KeyCode::V, @end
+  </autogen>
+</item>
+<!--ここから-->
+<item hidden="true">
+  <identifier vk_config="true">notsave.simple_vi_mode_Another_wer3 </identifier>
+  {{ SIMPLE_VI_MODE_EXTRA }}
+  <autogen>
+    __BlockUntilKeyUp__
+    KeyCode::V
+  </autogen>
+  十字キー
+  <autogen>__KeyToKey__
+    KeyCode::W,
+    KeyCode::CURSOR_LEFT
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::E,
+    KeyCode::CURSOR_DOWN
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::KEY_3,
+    KeyCode::CURSOR_UP
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::R,
+    KeyCode::CURSOR_RIGHT
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>Mayaのみ、「C」を押している間、wer3が十字キーに</name>
+  <only>MAYA2014,MAYA2015</only>
+  <identifier> privaadasdfatzxcve03xw.appdef </identifier>
+  <autogen>
+    __KeyOverlaidModifier__
+    KeyCode::C, ModifierFlag::NONE, @begin
+    KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_simple_vi_mode_Another_wer3maya, @end @begin
+    KeyCode::C, @end
+  </autogen>
+</item>
+<!--ここから-->
+<item hidden="true">
+  <identifier vk_config="true">notsave.simple_vi_mode_Another_wer3maya </identifier>
+  {{ SIMPLE_VI_MODE_EXTRA }}
+  <autogen>
+    __BlockUntilKeyUp__
+    KeyCode::C
+  </autogen>
+  十字キー
+  <autogen>__KeyToKey__
+    KeyCode::W,
+    KeyCode::CURSOR_LEFT
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::E,
+    KeyCode::CURSOR_DOWN
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::KEY_3,
+    KeyCode::CURSOR_UP
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::R,
+    KeyCode::CURSOR_RIGHT
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>Maya ……「A」Overlaid …… 234wersdf =テンキー</name>
+  <appendix>十字キー……「F」+IKJL 上下左右</appendix>
+  <only>MAYA2014,MAYA2015</only>
+  <identifier> anfmbc </identifier>
+  <autogen>
+    __KeyOverlaidModifier__
+    KeyCode::A, ModifierFlag::NONE, @begin
+    KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_simple_vi_mode_Another_Blender, @end @begin
+    KeyCode::A, @end
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+
+
+
+
+
+<item>
+  <name>
+    "virtualbox テンキー"_test</name>
+    <identifier> remap.virtual_Ten_test </identifier>
+    <only>Finder</only>
+    <autogen>        __KeyToKey__
+      KeyCode::SPACE,ModifierFlag::CONTROL_L,
+      KeyCode::SPACE,ModifierFlag::CONTROL_L,
+
+      KeyCode::VK_CONFIG_TOGGLE_notsave_virtual_Ten_test
+    </autogen>
+
+  </item>
+
+<item hidden="true">  <name>俺のvirtual_Ten_test</name>
+    <identifier vk_config="true">notsave.virtual_Ten_test </identifier>
+    <autogen>__ShowStatusMessage__ † virtual_Ten_test †
+    </autogen>
+
+     「かな」でVimモードを終了し、同時にかな入力モードにする
+    <autogen>
+      __KeyToKey__
+      KeyCode::JIS_KANA,
+      KeyCode::VK_CONFIG_TOGGLE_notsave_virtual_Ten_test,
+      KeyCode::JIS_KANA,
+    </autogen>
+    「エスケープ」でも終了
+    <autogen>
+      __KeyToKey__
+      KeyCode::ESCAPE,
+      KeyCode::VK_CONFIG_TOGGLE_notsave_virtual_Ten_test,
+    </autogen>
+    「英数」でVimモードを終了し、同時に英数入力モードにする
+    <autogen>
+      __KeyToKey__
+      KeyCode::JIS_EISUU,
+      KeyCode::VK_CONFIG_TOGGLE_notsave_virtual_Ten_test,
+      KeyCode::JIS_EISUU,
+    </autogen>
+
+
+  </item>
+
+
+
+
+  <item>    <name>Finder、Vim操作</name>
+    <identifier> pasvrivate03.appdef </identifier>
+    <only>Finder</only>
+    <uielementrole_not>AXTextArea, AXTextField</uielementrole_not>
+    エンターで開く
+    <autogen>__KeyToKey__
+      KeyCode::RETURN,
+      KeyCode::O, ModifierFlag::COMMAND_L
+    </autogen>
+    十字キー
+    <autogen>__KeyToKey__
+      KeyCode::X, ModifierFlag::NONE,
+      KeyCode::CURSOR_DOWN
+    </autogen>
+    <autogen>__KeyToKey__
+      KeyCode::Z, ModifierFlag::NONE,
+      KeyCode::CURSOR_UP
+    </autogen>
+    <autogen>__KeyToKey__
+      KeyCode::C, ModifierFlag::NONE,
+      KeyCode::CURSOR_UP
+    </autogen>
+    <autogen>__KeyToKey__
+      KeyCode::A, ModifierFlag::NONE,
+      KeyCode::CURSOR_LEFT
+    </autogen>
+    <autogen>__KeyToKey__
+      KeyCode::S, ModifierFlag::NONE,
+      KeyCode::CURSOR_RIGHT
+    </autogen>
+    ファイル削除
+    <autogen>__KeyToKey__
+      KeyCode::JIS_UNDERSCORE, ModifierFlag::NONE,
+      KeyCode::DELETE, ModifierFlag::COMMAND_L
+    </autogen>
+    ページアップ、ダウン
+    <autogen>__KeyToKey__
+      KeyCode::M, ModifierFlag::NONE,
+      KeyCode::PAGEUP
+    </autogen>
+    <autogen>__KeyToKey__
+      KeyCode::N, ModifierFlag::NONE,
+      KeyCode::PAGEDOWN
+    </autogen>
+    マウスクリック
+    <autogen>__KeyToKey__
+      KeyCode::H, |ModifierFlag::NONE,
+      PointingButton::LEFT
+    </autogen>
+    カット
+    ・コピー
+    ・ペースト
+    <autogen>__KeyToKey__
+      KeyCode::X, ModifierFlag::NONE,
+      KeyCode::X,ModifierFlag::COMMAND_L
+    </autogen>
+    <autogen>__KeyToKey__
+      KeyCode::C, ModifierFlag::NONE,
+      KeyCode::C,ModifierFlag::COMMAND_L
+    </autogen>
+    <autogen>__KeyToKey__
+      KeyCode::V, ModifierFlag::NONE,
+      KeyCode::V,ModifierFlag::COMMAND_L
+    </autogen>
+    戻る
+    ・進む 削除
+    <autogen>__KeyToKey__
+      KeyCode::KEY_1 ,ModifierFlag::CONTROL_L ,ModifierFlag::COMMAND_L ,
+      KeyCode::DELETE ,ModifierFlag::COMMAND_L
+    </autogen>
+    左側
+    <autogen>__KeyToKey__
+      KeyCode::W,ModifierFlag::NONE,
+      KeyCode::TAB , ModifierFlag::CONTROL_L , ModifierFlag::SHIFT_L
+    </autogen>
+    <autogen>__KeyToKey__
+      KeyCode::E, ModifierFlag::NONE,
+      KeyCode::TAB , ModifierFlag::CONTROL_L
+    </autogen>
+    <autogen>__KeyToKey__
+      KeyCode::D,
+      KeyCode::W , ModifierFlag::COMMAND_L
+    </autogen>
+    並び順 …… 名前
+    <autogen>__KeyToKey__
+      KeyCode::KEY_1, ModifierFlag::NONE,
+      KeyCode::KEY_1 , ModifierFlag::COMMAND_L, ModifierFlag::CONTROL_L
+    </autogen>
+    …… 種類
+    <autogen>__KeyToKey__
+      KeyCode::KEY_2, ModifierFlag::NONE,
+      KeyCode::KEY_2 , ModifierFlag::COMMAND_L, ModifierFlag::CONTROL_L
+    </autogen>
+    …… 追加日
+    <autogen>__KeyToKey__
+      KeyCode::KEY_4, ModifierFlag::NONE,
+      KeyCode::KEY_4 , ModifierFlag::COMMAND_L, ModifierFlag::CONTROL_L
+    </autogen>
+    サイドバーをトグル
+    <autogen>__KeyToKey__
+      KeyCode::S , ModifierFlag::CONTROL_L,
+      KeyCode::S , ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L ,
+    </autogen>
+    
+  </item>
+  <!--
+  ===============================================================
+  ===============================================================
+  ===============================================================
+  ===============================================================
+-->
+
+<item>  <name>◆ビューの調律 〜ちょっとVim〜 ◆</name>
+  <only>Preview</only>
+  <uielementrole_not>AXTextArea, AXTextField</uielementrole_not>
+  <identifier> adhm.appdef </identifier>
+  <appendix></appendix>
+  <appendix>JKLI …… 十字キー</appendix>
+  <appendix>N/M …… ページアップ、ダウン</appendix>
+  <appendix>U/O …… 行の最初/最後</appendix>
+  <appendix>SHIFT+ U/O …… 行の最初まで選択/最後まで選択</appendix>
+  <appendix>Y/P …… ホーム、エンド +Shift</appendix>
+  <appendix>S = Fnキー ……ページアップ/ダウン、ホーム/エンドが、十字キーとなった「IKJL」で行える。
+  </appendix>
+  <appendix>W/E/D …… 左/右/ミドルクリック</appendix>
+  <appendix>XCV …… カット
+    ・コピー
+    ・ペースト</appendix>
+    <appendix>Z/Shift + Z …… 戻す
+      ・やり直し</appendix>
+      閉じる
+      <autogen>__KeyToKey__
+        KeyCode::W,
+        KeyCode::W, ModifierFlag::COMMAND_L
+      </autogen>
+      JKLI = 十字キー
+      <autogen>__KeyToKey__
+        KeyCode::L,
+        KeyCode::CURSOR_RIGHT
+      </autogen>
+      <autogen>__KeyToKey__
+        KeyCode::K,
+        KeyCode::CURSOR_UP
+      </autogen>
+      <autogen>__KeyToKey__
+        KeyCode::J,
+        KeyCode::CURSOR_DOWN
+      </autogen>
+      <autogen>__KeyToKey__
+        KeyCode::H,
+        KeyCode::CURSOR_LEFT
+      </autogen>
+      N/M = ページアップ、ダウン
+      <autogen>__KeyToKey__
+        KeyCode::M,
+        KeyCode::PAGEUP
+      </autogen>
+      <autogen>__KeyToKey__
+        KeyCode::N,
+        KeyCode::PAGEDOWN
+      </autogen>
+      <autogen>__KeyToKey__
+        KeyCode::S,
+        KeyCode::PAGEUP
+      </autogen>
+      <autogen>__KeyToKey__
+        KeyCode::A,
+        KeyCode::PAGEDOWN
+      </autogen>
+      O/U = 行頭、行末
+      <autogen>__KeyToKey__
+        KeyCode::O ,
+        KeyCode::E, ModifierFlag::CONTROL_L
+      </autogen>
+      <autogen>__KeyToKey__
+        KeyCode::U,
+        KeyCode::A, ModifierFlag::CONTROL_L
+      </autogen>
+      修飾キー、「S」を fn 、スペースを⌘に
+      <autogen>__KeyToKey__
+        KeyCode::S,
+        KeyCode::FN
+      </autogen>
+      <autogen>__KeyToKey__
+        KeyCode::SPACE,
+        KeyCode::COMMAND_L
+      </autogen>
+      マウスキー ……WED 左右 ミドルクリック
+      <autogen>__KeyToKey__
+        KeyCode::W,
+        PointingButton::LEFT
+      </autogen>
+      <autogen>__KeyToKey__
+        KeyCode::E,
+        PointingButton::RIGHT
+      </autogen>
+      <autogen>__KeyToKey__
+        KeyCode::D,
+        PointingButton::MIDDLE
+      </autogen>
+      XCV = カット
+      ・コピー
+      ・ペースト
+      <autogen>__KeyToKey__
+        KeyCode::X,
+        KeyCode::X,ModifierFlag::COMMAND_L
+      </autogen>
+      <autogen>__KeyToKey__
+        KeyCode::C,
+        KeyCode::C,ModifierFlag::COMMAND_L
+      </autogen>
+      <autogen>__KeyToKey__
+        KeyCode::V,
+        KeyCode::V,ModifierFlag::COMMAND_L
+      </autogen>
+      戻す
+      ・やり直し
+      <autogen>__KeyToKey__
+        KeyCode::Z,
+        KeyCode::Z,ModifierFlag::COMMAND_L
+      </autogen>
+      <autogen>__KeyToKey__
+        KeyCode::Z, ModifierFlag::SHIFT_L,
+        KeyCode::Z,ModifierFlag::COMMAND_L,ModifierFlag::SHIFT_L,
+      </autogen>
+      
+    </item>
+    <!--
+    ===============================================================
+    ===============================================================
+    ===============================================================
+    ===============================================================
+  -->
+
+  <!--
+  ===============================================================
+  ===============================================================
+  ===============================================================
+  ===============================================================
+-->
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>──────────────────────────────</name>
+</item>
+<item>  <name>俺のvirtual_Ten</name>
+  <identifier vk_config="true">notsave.virtual_Ten </identifier>
+  <autogen>__ShowStatusMessage__ † virtual_Ten †
+  </autogen>
+  テンキー スペースに0
+  <autogen>__KeyToKey__
+    KeyCode::SPACE,
+    KeyCode::KEYPAD_0
+  </autogen>
+  数字
+  <autogen>__KeyToKey__
+    KeyCode::X,
+    KeyCode::KEYPAD_0
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::S,
+    KeyCode::KEYPAD_1
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::D,
+    KeyCode::KEYPAD_2
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::F,
+    KeyCode::KEYPAD_3
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::W,
+    KeyCode::KEYPAD_4
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::E,
+    KeyCode::KEYPAD_5
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::R,
+    KeyCode::KEYPAD_6
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::KEY_2,
+    KeyCode::KEYPAD_7
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::KEY_3,
+    KeyCode::KEYPAD_8
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::KEY_4,
+    KeyCode::KEYPAD_9
+  </autogen>
+  エンター、デリート
+  <autogen>__KeyToKey__
+    KeyCode::KEY_5,
+    KeyCode::ENTER
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::T,
+    KeyCode::DELETE
+  </autogen>
+  エンター、デリート
+  <autogen>__KeyToKey__
+    KeyCode::V,
+    KeyCode::ENTER
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::C,
+    KeyCode::DELETE
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::Y,
+    KeyCode::QUOTE
+  </autogen>
+  四則演算
+  <autogen>__KeyToKey__
+    KeyCode::KEY_6,
+    KeyCode::KEYPAD_SLASH
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::Y,
+    KeyCode::KEYPAD_MULTIPLY
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::G,
+    KeyCode::KEYPAD_MINUS
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::H,
+    KeyCode::KEYPAD_PLUS
+  </autogen>
+  コンマ
+  <autogen>__KeyToKey__
+    KeyCode::B,
+    KeyCode::DOT
+  </autogen>
+   「かな」でVimモードを終了し、同時にかな入力モードにする
+  <autogen>
+    __KeyToKey__
+    KeyCode::JIS_KANA,
+    KeyCode::VK_CONFIG_TOGGLE_notsave_virtual_Ten,
+    KeyCode::JIS_KANA,
+  </autogen>
+  「エスケープ」でも終了
+  <autogen>
+    __KeyToKey__
+    KeyCode::ESCAPE,
+    KeyCode::VK_CONFIG_TOGGLE_notsave_virtual_Ten,
+  </autogen>
+  「英数」でVimモードを終了し、同時に英数入力モードにする
+  <autogen>
+    __KeyToKey__
+    KeyCode::JIS_EISUU,
+    KeyCode::VK_CONFIG_TOGGLE_notsave_virtual_Ten,
+    KeyCode::JIS_EISUU,
+  </autogen>
+</item>
+<item>  <name>
+    "virtualbox テンキー"</name>
+    <identifier> remap.virtual_Ten </identifier>
+    <autogen>__DoublePressModifier__
+      KeyCode::JIS_UNDERSCORE, ModifierFlag::SHIFT_R , ModifierFlag::COMMAND_R,
+      KeyCode::JIS_UNDERSCORE, ModifierFlag::SHIFT_R , ModifierFlag::COMMAND_R,
+      KeyCode::VK_CONFIG_TOGGLE_notsave_virtual_Ten
+    </autogen>
+  </item>
+  8 =============================================================== ===============================================================
+  <item>    <name>──────────────────────────────</name>
+  </item>
+  <item>    <name>俺のVim</name>
+    <identifier vk_config="true">notsave.MyVIM </identifier>
+    <autogen>__ShowStatusMessage__ † VIM †
+    </autogen>
+
+
+    <!-- Esc -->
+    <autogen>__KeyToKey__
+      KeyCode::TAB,
+      KeyCode::ESCAPE,
+    </autogen>
+
+    <!-- Esc -->
+    <!-- <autogen>__KeyToKey__
+    KeyCode::COMMAND_R,
+    KeyCode::ESCAPE,
+  </autogen> -->
+
+  <!-- JKLI = 十字キー -->
+  <autogen>__KeyToKey__
+    KeyCode::1,
+    KeyCode::CURSOR_LEFT
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::2,
+    KeyCode::CURSOR_DOWN
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::3,
+    KeyCode::CURSOR_UP
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::4,
+    KeyCode::CURSOR_RIGHT
+  </autogen>
+  <!-- N/M = ページアップ / ダウン -->
+  <autogen>__KeyToKey__
+    KeyCode::M,
+    KeyCode::PAGEUP
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::N,
+    KeyCode::PAGEDOWN
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::SPACE,
+    KeyCode::PAGEDOWN
+  </autogen>
+  <!-- ,/. = エンド / ホーム -->
+  <autogen>__KeyToKey__
+    KeyCode::N,ModifierFlag::SHIFT_L,
+    KeyCode::END
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::M,ModifierFlag::SHIFT_L,
+    KeyCode::HOME
+  </autogen>
+
+  <!-- 修飾キー -->
+  <!-- A = Option -->
+  <!--  (実質A + F + j / l = 単語選択) -->
+  <autogen>__KeyToKey__
+    KeyCode::A,
+    KeyCode::OPTION_L
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::JIS_EISUU,
+    KeyCode::SHIFT_L
+  </autogen>
+
+  <!-- 10行 ジャンプ -->
+  <autogen>__KeyToKey__
+    KeyCode::Q,
+    KeyCode::OPTION_L,ModifierFlag::CONTROL_L,ModifierFlag::COMMAND_L,
+
+  </autogen>
+
+  <!-- A = 単語選択 -->
+  <autogen>__KeyToKey__
+    KeyCode::S,
+    KeyCode::CURSOR_LEFT,ModifierFlag::OPTION_L,
+    KeyCode::CURSOR_RIGHT,ModifierFlag::OPTION_L,ModifierFlag::SHIFT_L,
+  </autogen>
+  <!-- スペース = Cmd -->
+  <autogen>__KeyToKey__
+    KeyCode::SPACE,
+    KeyCode::COMMAND_L
+  </autogen>
+  <!-- O/U = 行頭、行末 -->
+  <autogen>__KeyToKey__
+    KeyCode::O,
+    KeyCode::E, ModifierFlag::CONTROL_L
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::U,
+    KeyCode::A, ModifierFlag::CONTROL_L
+  </autogen>
+  <!-- W/E/D = LMB/RMB/MMB -->
+  <autogen>__KeyToKey__
+    KeyCode::W,
+    PointingButton::LEFT
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::E,
+    PointingButton::RIGHT
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::D,
+    PointingButton::MIDDLE
+  </autogen>
+  <!-- X/C/V = カット・コピー・ペースト -->
+  <autogen>__KeyToKey__
+    KeyCode::X,
+    KeyCode::X,ModifierFlag::COMMAND_L
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::C,
+    KeyCode::C,ModifierFlag::COMMAND_L
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::V,
+    KeyCode::V,ModifierFlag::COMMAND_L
+  </autogen>
+  <!-- Y = 行コピー -->
+  <autogen>__KeyToKey__
+    KeyCode::Y,
+    KeyCode::A,ModifierFlag::CONTROL_L,
+    KeyCode::E,ModifierFlag::CONTROL_L,ModifierFlag::SHIFT_L,
+    KeyCode::C,ModifierFlag::COMMAND_L
+  </autogen>
+  <!-- T = 行カット -->
+  <autogen>__KeyToKey__
+    KeyCode::T,
+    KeyCode::A,ModifierFlag::CONTROL_L,
+    KeyCode::E,ModifierFlag::CONTROL_L,ModifierFlag::SHIFT_L,
+    KeyCode::X,ModifierFlag::COMMAND_L
+  </autogen>
+
+  <!-- P = 行削除 -->
+  <autogen>__KeyToKey__
+    KeyCode::P,
+    KeyCode::A,ModifierFlag::CONTROL_L,
+    KeyCode::E,ModifierFlag::CONTROL_L,ModifierFlag::SHIFT_L,
+    KeyCode::FORWARD_DELETE,
+    KeyCode::FORWARD_DELETE
+  </autogen>
+  <!-- Z = アンドゥ -->
+  <autogen>__KeyToKey__
+    KeyCode::Z,
+    KeyCode::Z,ModifierFlag::COMMAND_L
+  </autogen>
+  <!-- Z + Shift = リドゥ -->
+  <autogen>__KeyToKey__
+    KeyCode::Z, ModifierFlag::SHIFT_L,
+    KeyCode::Z,ModifierFlag::COMMAND_L,ModifierFlag::SHIFT_L,
+  </autogen>
+  <!-- H = F7 (カナ変換) -->
+  <autogen>__KeyToKey__
+    KeyCode::H,
+    KeyCode::F7
+  </autogen>
+
+  <!-- セミコロン = デリート -->
+  <autogen>__KeyToKey__
+    KeyCode::SEMICOLON, ModifierFlag::NONE,
+    KeyCode::DELETE,
+  </autogen>
+  <!-- コロン = エンター -->
+  <autogen>__KeyToKey__
+    KeyCode::QUOTE, ModifierFlag::NONE,
+    KeyCode::RETURN
+  </autogen>
+  <!-- @ = 後ろ削除  -->
+  <autogen>__KeyToKey__
+    KeyCode::BRACKET_LEFT, ModifierFlag::NONE,
+    KeyCode::FORWARD_DELETE
+  </autogen>
+  「かな」でVimモードを終了し、同時にかな入力モードにする
+  <autogen>
+    __KeyToKey__
+    KeyCode::JIS_KANA,
+    KeyCode::VK_CONFIG_TOGGLE_notsave_MyVIM,
+    KeyCode::JIS_KANA,
+  </autogen>
+  「エスケープ」でも終了
+  <autogen>
+    __KeyToKey__
+    KeyCode::ESCAPE,
+    KeyCode::VK_CONFIG_TOGGLE_notsave_MyVIM,
+  </autogen>
+  「英数」でVimモードを終了し、同時に英数入力モードにする
+  <autogen>
+    __KeyToKey__
+    KeyCode::JIS_EISUU,
+    KeyCode::VK_CONFIG_TOGGLE_notsave_MyVIM,
+    KeyCode::JIS_EISUU,
+  </autogen>
+</item>
+<item>  <name>
+    "汝、vimっぽいのを望むか"</name>
+    <identifier> remap.MyVIM </identifier>
+    <autogen>__DoublePressModifier__
+      KeyCode::FN,
+      KeyCode::FN, ModifierFlag::NONE,
+      KeyCode::VK_CONFIG_TOGGLE_notsave_MyVIM
+    </autogen>
+  </item>
+  <!--
+  ===============================================================
+  ===============================================================
+  ===============================================================
+  ===============================================================
+-->
+
+<item>  <name>With __KeyOverlaidModifierWithRepeat__</name>
+  <appendix>Use A to VK_CONFIG_SYNC_KEYDOWNUP (Send space if type only A key + key repeat.)</appendix>
+  <identifier> remap.samples_vk_config_keyoverlaidmodifierwithrepeatcxcx </identifier>
+  <autogen>
+    __KeyOverlaidModifierWithRepeat__
+    KeyCode::A,
+    KeyCode::VK_CONFIG_TOGGLE_notsave_MyVIM,
+    KeyCode::SPACE,
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>──────────────────────────────</name>
+</item>
+<item>  <name>
+    滅☆殺 クラウドアルパカ……の設定</name>
+    <identifier vk_config="true">notsave.CloudAlpacaVIM </identifier>
+    <only>CloudAlpaca</only>
+    <autogen>__ShowStatusMessage__ † VIMca †
+    </autogen>
+    ブラシ
+    ・消しゴム
+    <autogen>__KeyToKey__
+      KeyCode::Z,ModifierFlag::NONE,
+      KeyCode::B
+    </autogen>
+    <autogen>__KeyToKey__
+      KeyCode::X,ModifierFlag::NONE,
+      KeyCode::E
+    </autogen>
+    レイヤー追加
+    <autogen>__KeyToKey__
+      KeyCode::KEY_3,ModifierFlag::CONTROL_L,
+      KeyCode::KEY_3,ModifierFlag::COMMAND_L
+    </autogen>
+    モード離脱======================================== 「かな」でVimモードを終了し、同時にかな入力モードにする
+    <autogen>
+      __KeyToKey__
+      KeyCode::JIS_KANA,
+      KeyCode::VK_CONFIG_TOGGLE_notsave_CloudAlpacaVIM,
+      KeyCode::JIS_KANA,
+    </autogen>
+    「英数」でVimモードを終了し、同時に英数入力モードにする
+    <autogen>
+      __KeyToKey__
+      KeyCode::JIS_EISUU,
+      KeyCode::VK_CONFIG_TOGGLE_notsave_CloudAlpacaVIM,
+      KeyCode::JIS_EISUU,
+    </autogen>
+  </item>
+  <item>    <name>
+      滅☆殺 クラウドアルパカvim</name>
+      <identifier> remap.CloudAlpacaVIM </identifier>
+      <only>CloudAlpaca</only>
+      <autogen>__DoublePressModifier__
+        KeyCode::B,ModifierFlag::OPTION_L,
+        KeyCode::B,ModifierFlag::OPTION_L,
+        KeyCode::VK_CONFIG_TOGGLE_notsave_CloudAlpacaVIM
+      </autogen>
+    </item>
+    <!--
+    ===============================================================
+    ===============================================================
+    ===============================================================
+    ===============================================================
+  -->
+
+  <item>    <name>カーソル移動</name>
+    <identifier> private.valksjfa </identifier>
+    <autogen>__KeyToKey__
+      KeyCode::J |ModifierFlag::SHIFT_R |ModifierFlag::OPTION_L |ModifierFlag::CONTROL_L,
+      KeyCode::VK_MOUSEKEY_LEFT
+    </autogen>
+    <autogen>__KeyToKey__
+      KeyCode::K |ModifierFlag::SHIFT_R |ModifierFlag::OPTION_L |ModifierFlag::CONTROL_L,
+      KeyCode::VK_MOUSEKEY_DOWN
+    </autogen>
+    <autogen>__KeyToKey__
+      KeyCode::I |ModifierFlag::SHIFT_R |ModifierFlag::OPTION_L |ModifierFlag::CONTROL_L,
+      KeyCode::VK_MOUSEKEY_UP
+    </autogen>
+    <autogen>__KeyToKey__
+      KeyCode::L |ModifierFlag::SHIFT_R |ModifierFlag::OPTION_L |ModifierFlag::CONTROL_L,
+      KeyCode::VK_MOUSEKEY_RIGHT
+    </autogen>
+  </item>
+  <!--
+  ===============================================================
+  ===============================================================
+  ===============================================================
+  ===============================================================
+-->
+
+<item>  <name>単語移動……「E」+IKJL 、「W」で単語選択</name>
+  <identifier> private03aaa.appdef </identifier>
+  <autogen>
+    __KeyOverlaidModifier__
+    KeyCode::E, ModifierFlag::NONE, @begin
+    KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_simple_vi_mode_AnotherEEE, @end @begin
+    KeyCode::E, @end
+  </autogen>
+</item>
+<!--ここから-->
+<item hidden="true">
+  <identifier vk_config="true">notsave.simple_vi_mode_AnotherEEE </identifier>
+  {{ SIMPLE_VI_MODE_EXTRA }}
+  <autogen>
+    __BlockUntilKeyUp__
+    KeyCode::E
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::J,
+    KeyCode::CURSOR_LEFT,VK_OPTION
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::K,
+    KeyCode::CURSOR_DOWN,VK_OPTION
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::I,
+    KeyCode::CURSOR_UP,VK_OPTION
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::L,
+    KeyCode::CURSOR_RIGHT,VK_OPTION
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::SEMICOLON,
+    KeyCode::DELETE,VK_OPTION
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::S,
+    KeyCode::FN
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::E,
+    KeyCode::OPTION_L
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::W,
+    KeyCode::SHIFT_L
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::SPACE,
+    KeyCode::COMMAND_L
+  </autogen>
+</item>
+<!--ーーーーーーーーーーーーーーーーーーーーーーーーー-->
+<item>  <name>単語選択……「W」+IKJL
+  </name>
+  <identifier> private03aaaW.appdef </identifier>
+  <autogen>
+    __KeyOverlaidModifier__
+    KeyCode::W, ModifierFlag::NONE, @begin
+    KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_simple_vi_mode_AnotherEEEW, @end @begin
+    KeyCode::W, @end
+  </autogen>
+</item>
+<!--ここから-->
+<item hidden="true">
+  <identifier vk_config="true">notsave.simple_vi_mode_AnotherEEEW </identifier>
+  {{ SIMPLE_VI_MODE_EXTRA }}
+  <autogen>
+    __BlockUntilKeyUp__
+    KeyCode::W
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::J,
+    KeyCode::CURSOR_LEFT
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::K,
+    KeyCode::CURSOR_DOWN
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::I,
+    KeyCode::CURSOR_UP
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::L,
+    KeyCode::CURSOR_RIGHT
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>Dreamweaver,home endをSキーで
+  </name>
+  <only>Dreamweaver</only>
+  <identifier> private03acaaW.appdef </identifier>
+  <autogen>
+    __KeyOverlaidModifier__
+    KeyCode::S, ModifierFlag::NONE, @begin
+    KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_simple_vi_mode_AnotherEEEWc, @end @begin
+    KeyCode::S, @end
+  </autogen>
+</item>
+<!--ここから-->
+<item hidden="true">
+  <identifier vk_config="true">notsave.simple_vi_mode_AnotherEEEWc </identifier>
+  {{ SIMPLE_VI_MODE_EXTRA }}
+  <autogen>
+    __BlockUntilKeyUp__
+    KeyCode::S
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::J,
+    KeyCode::HOME, | VK_SHIFT
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::L,
+    KeyCode::END, | VK_SHIFT
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+KeyCode::PC_APPLICATION characters: eventType:KeyUp code:0x6e
+name:Application flags: misc:
+KeyCode::PC_APPLICATION characters: =============================================================== ===============================================================
+<item>  <name>PC_APPLICATION ……⌘ Cmd</name>
+    <identifier> praziiajassds1.appdef </identifier>
+    <only>3D-Coat</only>
+    <autogen>
+      __KeyToKey__
+      KeyCode::PC_APPLICATION,
+      KeyCode::COMMAND_R,
+    </autogen>
+  </item>
+  <item>    <name>マウスカーソル移動……「R」+IKJL
+    </name>
+    <identifier> private03MMM.appdef </identifier>
+    <uielementrole_not>AXTextArea, AXTextField</uielementrole_not>
+    <autogen>
+      __KeyOverlaidModifier__
+      KeyCode::R, ModifierFlag::NONE, @begin
+      KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_simple_vi_mode_AnotherMMM, @end @begin
+      KeyCode::R, @end
+    </autogen>
+  </item>
+  <!--ここから-->
+  <item hidden="true">
+    <identifier vk_config="true">notsave.simple_vi_mode_AnotherMMM </identifier>
+    {{ SIMPLE_VI_MODE_EXTRA }}
+    <autogen>
+      __BlockUntilKeyUp__
+      KeyCode::R
+    </autogen>
+    <autogen>__KeyToKey__
+      KeyCode::J,
+      KeyCode::VK_MOUSEKEY_LEFT
+    </autogen>
+    <autogen>__KeyToKey__
+      KeyCode::K,
+      KeyCode::VK_MOUSEKEY_DOWN
+    </autogen>
+    <autogen>__KeyToKey__
+      KeyCode::I,
+      KeyCode::VK_MOUSEKEY_UP
+    </autogen>
+    <autogen>__KeyToKey__
+      KeyCode::L,
+      KeyCode::VK_MOUSEKEY_RIGHT
+    </autogen>
+    <autogen>__KeyToKey__
+      KeyCode::W|ModifierFlag::NONE,
+      PointingButton::LEFT
+    </autogen>
+    <autogen>__KeyToKey__
+      KeyCode::E|ModifierFlag::NONE,
+      PointingButton::RIGHT
+    </autogen>
+    <autogen>__KeyToKey__
+      KeyCode::D|ModifierFlag::NONE,
+      PointingButton::MIDDLE
+    </autogen>
+    <autogen>__KeyToKey__
+      KeyCode::N,
+      KeyCode::KEY_8, ModifierFlag::CONTROL_L| ModifierFlag::SHIFT_L| ModifierFlag::OPTION_L|
+    </autogen>
+    <autogen>__KeyToKey__
+      KeyCode::M,
+      KeyCode::KEY_0, ModifierFlag::CONTROL_L| ModifierFlag::SHIFT_L| ModifierFlag::OPTION_L|
+    </autogen>
+    <autogen>__KeyToKey__
+      KeyCode::COMMA,
+      KeyCode::KEY_9, ModifierFlag::CONTROL_L| ModifierFlag::SHIFT_L| ModifierFlag::OPTION_L|
+    </autogen>
+    <autogen>__KeyToKey__
+      KeyCode::SPACE,
+      KeyCode::COMMAND_L
+    </autogen>
+    <autogen>__KeyToKey__
+      KeyCode::S,
+      KeyCode::FN
+    </autogen>
+  </item>
+  <!--
+  ===============================================================
+  ===============================================================
+  ===============================================================
+  ===============================================================
+-->
+
+<item>  <name>Blender …… Tab …… Simple Vim
+  </name>
+  <identifier> private0asdfaoaW.appdef </identifier>
+  <only>Blender</only>
+  <autogen>
+    __KeyOverlaidModifier__
+    KeyCode::TAB, ModifierFlag::NONE, @begin
+    KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_simple_vi_mode_BTAB, @end @begin
+    KeyCode::TAB, @end
+  </autogen>
+</item>
+<!--ここから-->
+<item hidden="true">
+  <identifier vk_config="true">notsave.simple_vi_mode_BTAB </identifier>
+  {{ SIMPLE_VI_MODE_EXTRA }}
+  <autogen>
+    __BlockUntilKeyUp__
+    KeyCode::TAB
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::J,
+    KeyCode::CURSOR_LEFT,VK_OPTION | VK_SHIFT
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::K,
+    KeyCode::CURSOR_DOWN,VK_OPTION | VK_SHIFT
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::I,
+    KeyCode::CURSOR_UP,VK_OPTION | VK_SHIFT
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::L,
+    KeyCode::CURSOR_RIGHT,VK_OPTION | VK_SHIFT
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::SEMICOLON,
+    KeyCode::DELETE,VK_OPTION | VK_SHIFT
+  </autogen>
+  <autogen>
+    __KeyToKey__
+    KeyCode::F,
+    KeyCode::F,
+    KeyCode::JIS_EISUU
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::S,
+    KeyCode::FN
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::E,
+    KeyCode::OPTION_L
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::W,
+    KeyCode::SHIFT_L
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::SPACE,
+    KeyCode::COMMAND_L
+  </autogen>
+</item>
+<!--
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+-->
+
+<item>  <name>日本語殺しのモード</name>
+  <only>Firefox</only>
+  <identifier vk_config="true">notsave.NINSATU </identifier>
+  <autogen>__ShowStatusMessage__ † 日本語殺し †
+  </autogen>
+  「エスケープ」で抜ける
+  <autogen>
+    __KeyToKey__
+    KeyCode::ESCAPE,
+    KeyCode::VK_CONFIG_TOGGLE_notsave_NINSATU,
+    KeyCode::ESCAPE,
+  </autogen>
+  「リターン」でも抜ける
+  <autogen>
+    __KeyToKey__
+    KeyCode::RETURN,
+    KeyCode::VK_CONFIG_TOGGLE_notsave_NINSATU,
+    KeyCode::RETURN
+  </autogen>
+  カナキーは英数キーになる
+  <autogen>
+    __KeyToKey__
+    KeyCode::JIS_KANA,
+    KeyCode::JIS_EISUU
+  </autogen>
+</item>
+<item>  <name>
+    "日本語殺し"</name>
+    <only>Firefox</only>
+    <identifier> remap.s </identifier>
+    <autogen>__KeyToKey__
+      KeyCode::SLASH, ModifierFlag::COMMAND_R,
+      KeyCode::VK_CONFIG_TOGGLE_notsave_NINSATU,
+      KeyCode::JIS_EISUU,
+      KeyCode::QUOTE,
+      KeyCode::QUOTE
+    </autogen>
+  </item>
+  <!--
+  ===============================================================
+  ===============================================================
+  ===============================================================
+  ===============================================================
+-->
+
+<item>  <name>日本語殺しのモード</name>
+  <identifier> pzty3e5ydhsaass1.appdef </identifier>
+  <only>Firefox</only>
+  <uielementrole_not>AXTextArea, AXTextField</uielementrole_not>
+  <!-- 十字キー -->
+  <autogen>__KeyToKey__
+    KeyCode::X, ModifierFlag::NONE,
+    KeyCode::CURSOR_DOWN
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::Z, ModifierFlag::NONE,
+    KeyCode::CURSOR_UP
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::C, ModifierFlag::NONE,
+    KeyCode::CURSOR_UP
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::A, ModifierFlag::NONE,
+    KeyCode::CURSOR_LEFT
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::S, ModifierFlag::NONE,
+    KeyCode::CURSOR_RIGHT
+  </autogen>
+  <!-- ファイル削除 -->
+  <autogen>__KeyToKey__
+    KeyCode::JIS_UNDERSCORE, ModifierFlag::NONE,
+    KeyCode::DELETE, ModifierFlag::COMMAND_L
+  </autogen>
+  <!-- ページアップ、ダウン -->
+  <autogen>__KeyToKey__
+    KeyCode::M, ModifierFlag::NONE,
+    KeyCode::PAGEUP
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::N, ModifierFlag::NONE,
+    KeyCode::PAGEDOWN
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::S, ModifierFlag::NONE,
+    KeyCode::PAGEUP
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::A, ModifierFlag::NONE,
+    KeyCode::PAGEDOWN
+  </autogen>
+  <!-- カット
+  ・コピー
+  ・ペースト -->
+  <autogen>__KeyToKey__
+    KeyCode::X, ModifierFlag::NONE,
+    KeyCode::X,ModifierFlag::COMMAND_L
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::C, ModifierFlag::NONE,
+    KeyCode::C,ModifierFlag::COMMAND_L
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::V, ModifierFlag::NONE,
+    KeyCode::V,ModifierFlag::COMMAND_L
+  </autogen>
+  <!-- 戻る
+  ・進む -->
+  <autogen>__KeyToKey__
+    KeyCode::B , ModifierFlag::NONE ,
+    KeyCode::CURSOR_LEFT ,ModifierFlag::COMMAND_L
+  </autogen>
+  <!-- 左側 -->
+  <autogen>__KeyToKey__
+    KeyCode::W, ModifierFlag::NONE,
+    KeyCode::TAB , ModifierFlag::CONTROL_L
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::Q,ModifierFlag::NONE,
+    KeyCode::TAB , ModifierFlag::CONTROL_L , ModifierFlag::SHIFT_L
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::I, ModifierFlag::NONE,
+    KeyCode::TAB , ModifierFlag::CONTROL_L
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::U,ModifierFlag::NONE,
+    KeyCode::TAB , ModifierFlag::CONTROL_L , ModifierFlag::SHIFT_L
+  </autogen>
+  <autogen>__KeyToKey__
+    KeyCode::D,
+    KeyCode::W , ModifierFlag::COMMAND_L
+  </autogen>
+  <!-- サイドバーをトグル -->
+  <autogen>__KeyToKey__
+    KeyCode::S , ModifierFlag::CONTROL_L,
+    KeyCode::S , ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L ,
+  </autogen>
+</item>
+
+
+
+
+
+
+
+<!--
+<item>  <name>US親指シフト入力</name>
+  <include path="uso/usorz_base.xml" />
+</item>
+
+
+<item>  <name>「親指シフト Orzレイアウト」</name>
+  <include path="orz/orz_base.xml" />
+</item> -->
+
+
+<item>  <name></name>
+</item>
+<item>  <name></name>
+</item>
+<item>  <name>=========================▼▼▼ ユーザー設定ここまで ▼▼▼=========================</name>
+</item>
+<item>  <name></name>
+</item>
+<item>  <name></name>
+</item>
+
+
+
+
+
+▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼
+</root>
