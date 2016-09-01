@@ -1,0 +1,19 @@
+
+  <item>  <name>findr tab  - sequence rename, like Windows Explorer</name>
+    <identifier>private.findr_tab</identifier>
+    <only>Finder</only>
+    <uielementrole_only>AXTextArea, AXTextField</uielementrole_only>
+
+    <autogen>__KeyToKey__
+      KeyCode::TAB,ModifierFlag::NONE,
+      KeyCode::RETURN,
+      KeyCode::CURSOR_DOWN,
+      KeyCode::RETURN
+    </autogen>
+    <autogen>__KeyToKey__
+      KeyCode::TAB,ModifierFlag::SHIFT_L,
+      KeyCode::RETURN,
+      KeyCode::CURSOR_UP,
+      KeyCode::RETURN
+    </autogen>
+  </item>
