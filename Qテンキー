@@ -1,0 +1,149 @@
+
+<item>  <name>◆ Qテンキー ◆</name>
+  <identifier> anfmb </identifier>
+  <appendix></appendix>
+  <appendix>「Q」を押している間、S/D/F/W/E/R/2/3/4がテンキーに</appendix>
+  <appendix> =====================================================                      </appendix>
+  <appendix>                       </appendix>
+  <appendix>スペース,S,D,F,W,E,R,2,3,4,B,6,Y,G,H</appendix>
+  <appendix>↓ ↓ ↓</appendix>
+  <appendix>0,1,2,3,4,5,6,7,8,9,. ,/,:,-,+</appendix>
+  <appendix>                       </appendix>
+  <appendix> =====================================================                      </appendix>
+  <appendix>   ↓ ↓ 図 ↓ ↓              </appendix>
+  <appendix>                       </appendix>
+  <appendix>  2 3 4  5   6        </appendix>
+  <appendix> Q W E R  T  Y U       </appendix>
+  <appendix>   S D F  G  H         </appendix>
+  <appendix>          D            </appendix>
+  <appendix>          SPACE        </appendix>
+  <appendix>                       </appendix>
+  <appendix>       ↓ ↓ ↓           </appendix>
+  <appendix>                       </appendix>
+  <appendix>   7 8 9 ENR /           </appendix>
+  <appendix>   4 5 6 DEL ： *       </appendix>
+  <appendix>   1 2 3 -   +         </appendix>
+  <appendix>         .             </appendix>
+  <appendix>         0             </appendix>
+  <appendix>                       </appendix>
+  <appendix>                       </appendix>
+
+  <autogen>
+    __KeyOverlaidModifier__
+    KeyCode::Q, ModifierFlag::NONE, @begin
+    KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_simple_vi_mode_Another_Blender, @end @begin
+    KeyCode::Q, @end
+  </autogen>
+</item>
+<!--ここから-->
+<item hidden="true">
+  <identifier vk_config="true">notsave.simple_vi_mode_Another_Blender </identifier>
+  {{ SIMPLE_VI_MODE_EXTRA }}
+  <autogen>
+    __BlockUntilKeyUp__
+    KeyCode::Q
+  </autogen>
+  <!-- 秒数を入力30* -->
+  <autogen>__KeyToKey__
+              KeyCode::A,
+              KeyCode::3,
+              KeyCode::0,
+              KeyCode::QUOTE,ModifierFlag::SHIFT_L
+  </autogen>
+  <!-- テンキー スペースに0 -->
+  <autogen>__KeyToKey__
+              KeyCode::SPACE,
+              KeyCode::KEYPAD_0
+  </autogen>
+  <!-- 数字 -->
+  <autogen>__KeyToKey__
+              KeyCode::X,
+              KeyCode::KEYPAD_0
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::S,
+              KeyCode::KEYPAD_1
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::D,
+              KeyCode::KEYPAD_2
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::F,
+              KeyCode::KEYPAD_3
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::W,
+              KeyCode::KEYPAD_4
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::E,
+              KeyCode::KEYPAD_5
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::R,
+              KeyCode::KEYPAD_6
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::KEY_2,
+              KeyCode::KEYPAD_7
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::KEY_3,
+              KeyCode::KEYPAD_8
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::KEY_4,
+              KeyCode::KEYPAD_9
+  </autogen>
+  <!-- エンター、デリート -->
+  <autogen>__KeyToKey__
+              KeyCode::KEY_5,
+              KeyCode::ENTER
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::T,
+              KeyCode::DELETE
+  </autogen>
+  <!-- エンター、デリート -->
+  <autogen>__KeyToKey__
+              KeyCode::V,
+              KeyCode::ENTER
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::C,
+              KeyCode::DELETE
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::U,
+              KeyCode::QUOTE,ModifierFlag::SHIFT_L,
+  </autogen>
+
+  <autogen>__KeyToKey__
+              KeyCode::Y,
+              KeyCode::QUOTE
+  </autogen>
+  <!-- 四則演算 -->
+  <autogen>__KeyToKey__
+              KeyCode::KEY_6,
+              KeyCode::KEYPAD_SLASH
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::Y,
+              KeyCode::KEYPAD_MULTIPLY
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::G,
+              KeyCode::KEYPAD_MINUS
+  </autogen>
+  <autogen>__KeyToKey__
+              KeyCode::H,
+              KeyCode::KEYPAD_PLUS
+  </autogen>
+  <!-- コンマ -->
+  <autogen>__KeyToKey__
+              KeyCode::B,
+              KeyCode::DOT
+  </autogen>
+  
+</item>
